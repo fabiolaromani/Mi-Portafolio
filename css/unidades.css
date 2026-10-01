@@ -1,0 +1,717 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eafcff,
+            #ffffff,
+            #ddf9ff
+        );
+
+    color: #006fae;
+}
+
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.encabezado {
+
+    height: 145px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 5%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #dffaff,
+            #f2feff,
+            #dffaff
+        );
+
+    border-bottom: 3px solid #a0eaf6;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    z-index: 2;
+}
+
+
+.logo img {
+
+    width: 300px;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+
+/* =========================================
+   MENÚ
+========================================= */
+
+.menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    z-index: 2;
+}
+
+
+.menu a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 18px 20px;
+
+    border-radius: 15px;
+
+    text-decoration: none;
+
+    color: #0074ad;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.menu a i {
+
+    font-size: 23px;
+}
+
+
+.menu a:hover {
+
+    background-color: #c8f5fc;
+}
+
+
+.menu .activo {
+
+    background-color: #b7eff8;
+}
+
+
+
+/* =========================================
+   INFORMACIÓN FACULTAD
+========================================= */
+
+.informacion-facultad {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    max-width: 310px;
+
+    z-index: 2;
+}
+
+
+.informacion-facultad img {
+
+    width: 95px;
+
+    height: 95px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 3px solid white;
+
+    box-shadow:
+        0 0 0 2px #b7eefa;
+}
+
+
+.informacion-facultad strong {
+
+    font-size: 16px;
+
+    color: #006da8;
+}
+
+
+.informacion-facultad p {
+
+    margin-top: 7px;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color: #0075ae;
+}
+
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+main {
+
+    width: 100%;
+
+    padding: 30px 3% 50px;
+}
+
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.titulo {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+    position: relative;
+}
+
+
+.icono-carpeta {
+
+    width: 130px;
+
+    height: 130px;
+
+    margin: 0 auto 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #d0f8ff;
+
+    border-radius: 50%;
+}
+
+
+.icono-carpeta i {
+
+    font-size: 70px;
+
+    color: #007db7;
+}
+
+
+.titulo h1 {
+
+    font-size: 52px;
+
+    color: #006ba5;
+
+    font-weight: 900;
+
+    margin-bottom: 5px;
+}
+
+
+.titulo h2 {
+
+    font-size: 32px;
+
+    color: #0874ad;
+
+    margin-bottom: 10px;
+}
+
+
+.titulo p {
+
+    font-size: 24px;
+
+    color: #0078b4;
+}
+
+
+
+/* =========================================
+   MENSAJE
+========================================= */
+
+.mensaje {
+
+    width: fit-content;
+
+    margin: 28px auto 0;
+
+    padding: 13px 30px;
+
+    background-color: #bdf3fb;
+
+    border-radius: 30px;
+
+    font-size: 22px;
+
+    color: #0076b1;
+}
+
+
+
+/* =========================================
+   GRID DE UNIDADES
+========================================= */
+
+.unidades {
+
+    width: 95%;
+
+    max-width: 1500px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 40px;
+}
+
+
+
+/* =========================================
+   TARJETAS
+========================================= */
+
+.tarjeta {
+
+    min-height: 220px;
+
+    padding: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    text-decoration: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.96),
+            rgba(230,250,255,0.95)
+        );
+
+    border: 2px solid #a5eaf5;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 160, 200, 0.08);
+
+    transition: 0.3s;
+}
+
+
+.tarjeta:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 150, 190, 0.18);
+
+    border-color: #6ed9ed;
+}
+
+
+
+/* =========================================
+   ICONO DE UNIDAD
+========================================= */
+
+.icono-unidad {
+
+    width: 120px;
+
+    height: 120px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #baf2fb;
+
+    border-radius: 50%;
+
+    margin-right: 35px;
+}
+
+
+.icono-unidad i {
+
+    font-size: 58px;
+
+    color: #0079b5;
+}
+
+
+
+/* =========================================
+   CONTENIDO TARJETA
+========================================= */
+
+.contenido-tarjeta {
+
+    padding-right: 60px;
+}
+
+
+.contenido-tarjeta h3 {
+
+    font-size: 37px;
+
+    color: #006da8;
+
+    margin-bottom: 12px;
+}
+
+
+.contenido-tarjeta p {
+
+    font-size: 21px;
+
+    line-height: 1.4;
+
+    color: #087bb5;
+}
+
+
+
+/* =========================================
+   FLECHA
+========================================= */
+
+.flecha {
+
+    position: absolute;
+
+    right: 25px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #b9f1fa;
+}
+
+
+.flecha i {
+
+    font-size: 25px;
+
+    color: #0076b1;
+}
+
+
+
+/* =========================================
+   DECORACIÓN INFERIOR
+========================================= */
+
+.tarjeta::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+
+    height: 80px;
+
+    left: -50px;
+
+    bottom: -45px;
+
+    border-radius: 50%;
+
+    background-color: #b8f2fb;
+
+    opacity: 0.7;
+
+    transform: rotate(8deg);
+}
+
+
+.tarjeta::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+
+    height: 60px;
+
+    right: -100px;
+
+    bottom: -30px;
+
+    border-radius: 50%;
+
+    background-color: #d1f8fd;
+
+    opacity: 0.9;
+
+    transform: rotate(-8deg);
+}
+
+
+
+/* =========================================
+   PIE DE PÁGINA
+========================================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 20px;
+
+    color: #0075ad;
+
+    font-size: 15px;
+}
+
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .logo img {
+
+        width: 220px;
+    }
+
+
+    .menu a {
+
+        padding: 12px;
+
+        font-size: 15px;
+    }
+
+
+    .informacion-facultad {
+
+        display: none;
+    }
+
+
+    .titulo h1 {
+
+        font-size: 42px;
+    }
+
+
+    .contenido-tarjeta h3 {
+
+        font-size: 30px;
+    }
+
+}
+
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 750px) {
+
+    .encabezado {
+
+        height: auto;
+
+        padding: 15px;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    .logo img {
+
+        width: 220px;
+    }
+
+
+    .menu {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .menu a {
+
+        padding: 10px 14px;
+    }
+
+
+    .titulo h1 {
+
+        font-size: 32px;
+    }
+
+
+    .titulo h2 {
+
+        font-size: 23px;
+    }
+
+
+    .titulo p {
+
+        font-size: 18px;
+    }
+
+
+    .mensaje {
+
+        font-size: 17px;
+    }
+
+
+    .unidades {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        width: 100%;
+    }
+
+
+    .tarjeta {
+
+        min-height: 180px;
+
+        padding: 20px;
+    }
+
+
+    .icono-unidad {
+
+        width: 85px;
+
+        height: 85px;
+
+        margin-right: 20px;
+    }
+
+
+    .icono-unidad i {
+
+        font-size: 40px;
+    }
+
+
+    .contenido-tarjeta h3 {
+
+        font-size: 25px;
+    }
+
+
+    .contenido-tarjeta p {
+
+        font-size: 16px;
+    }
+
+
+    .flecha {
+
+        width: 42px;
+
+        height: 42px;
+
+        right: 15px;
+    }
+
+}

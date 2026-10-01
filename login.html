@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Iniciar sesión - Portafolio Académico</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- Iconos -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado"> <!-- LOGO UPLA --> <div class="logo-universidad"> <img src="Imagen/upla.png" alt="Universidad Peruana Los Andes"> </div> <!-- INFORMACIÓN --> <div class="datos-universidad"> <h1>Universidad Peruana Los Andes</h1> <div class="facultad"> <span></span> <h2>Facultad de Ingeniería</h2> <span></span> </div> <p> Escuela Profesional de Ingeniería de Sistemas y Computación </p> </div> <!-- LOGO FACULTAD --> <div class="foto-facultad"> <img src="Imagen/Ingenieria.jpg" alt="Facultad de Ingeniería"> </div> </header>
+
+
+    <!-- CONTENIDO DEL LOGIN -->
+    <main class="contenedor-login">
+
+        <div class="tarjeta-login">
+
+            <div class="icono-administrador">
+                <i class="fa-solid fa-user-shield"></i>
+            </div>
+
+            <h1>Administrador</h1>
+
+            <p class="texto-login">
+                Ingrese sus datos para acceder al panel de administración.
+            </p>
+
+            <form>
+
+                <div class="campo-login">
+                    <label for="usuario">
+                        <i class="fa-solid fa-user"></i>
+                        Usuario
+                    </label>
+
+                    <input type="text"
+                           id="usuario"
+                           name="usuario"
+                           placeholder="Ingrese su usuario">
+                </div>
+
+
+                <div class="campo-login">
+                    <label for="contrasena">
+                        <i class="fa-solid fa-lock"></i>
+                        Contraseña
+                    </label>
+
+                    <input type="password"
+                           id="contrasena"
+                           name="contrasena"
+                           placeholder="Ingrese su contraseña">
+                </div>
+
+
+                <button type="submit" class="boton-login">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                    Iniciar sesión
+                </button>
+
+            </form>
+
+
+            <a href="index.html" class="volver-portafolio">
+                <i class="fa-solid fa-arrow-left"></i>
+                Volver al portafolio
+            </a>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

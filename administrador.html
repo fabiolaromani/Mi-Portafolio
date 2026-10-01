@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Administrador - Portafolio Académico</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ========================================= -->
+    <!-- ENCABEZADO -->
+    <!-- ========================================= -->
+
+    <header class="encabezado">
+
+        <div class="logo-universidad">
+
+            <img src="Imagen/upla.png"
+                 alt="Universidad Peruana Los Andes">
+
+        </div>
+
+
+        <div class="datos-universidad">
+
+            <h1>
+                Universidad Peruana Los Andes
+            </h1>
+
+            <div class="facultad">
+
+                <span></span>
+
+                <h2>
+                    Facultad de Ingeniería
+                </h2>
+
+                <span></span>
+
+            </div>
+
+            <p>
+                Escuela Profesional de Ingeniería de Sistemas y Computación
+            </p>
+
+        </div>
+
+
+        <div class="foto-facultad">
+
+            <img src="Imagen/Ingenieria.jpg"
+                 alt="Facultad de Ingeniería">
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ========================================= -->
+    <!-- CONTENIDO ADMINISTRADOR -->
+    <!-- ========================================= -->
+
+    <main class="contenedor-administrador">
+
+
+        <!-- CABECERA -->
+
+        <div class="cabecera-admin">
+
+            <div>
+
+                <h1>
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                    Panel de Administrador
+
+                </h1>
+
+                <p>
+                    Desde este panel puede administrar el contenido
+                    del portafolio académico.
+                </p>
+
+            </div>
+
+
+            <a href="index.html"
+               class="cerrar-admin">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Cerrar sesión
+
+            </a>
+
+        </div>
+
+
+
+        <!-- ========================================= -->
+        <!-- UNIDADES -->
+        <!-- ========================================= -->
+
+        <section class="seccion-admin">
+
+            <h2>
+
+                <i class="fa-solid fa-folder-open"></i>
+
+                Seleccionar Unidad
+
+            </h2>
+
+
+            <div class="unidades-admin">
+
+
+                <button class="unidad-admin activa"
+                        type="button">
+
+                    <i class="fa-solid fa-folder"></i>
+
+                    <span>
+                        Unidad 01
+                    </span>
+
+                    <small>
+                        4 semanas
+                    </small>
+
+                </button>
+
+
+                <button class="unidad-admin"
+                        type="button">
+
+                    <i class="fa-solid fa-folder"></i>
+
+                    <span>
+                        Unidad 02
+                    </span>
+
+                    <small>
+                        4 semanas
+                    </small>
+
+                </button>
+
+
+                <button class="unidad-admin"
+                        type="button">
+
+                    <i class="fa-solid fa-folder"></i>
+
+                    <span>
+                        Unidad 03
+                    </span>
+
+                    <small>
+                        4 semanas
+                    </small>
+
+                </button>
+
+
+                <button class="unidad-admin"
+                        type="button">
+
+                    <i class="fa-solid fa-folder"></i>
+
+                    <span>
+                        Unidad 04
+                    </span>
+
+                    <small>
+                        4 semanas
+                    </small>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================================= -->
+        <!-- SEMANAS -->
+        <!-- ========================================= -->
+
+        <section class="seccion-admin">
+
+            <div class="titulo-seccion-admin">
+
+                <h2 id="titulo-unidad">
+
+                    <i class="fa-solid fa-calendar-week"></i>
+
+                    Unidad 01
+
+                </h2>
+
+
+                <button class="boton-agregar"
+                        type="button"
+                        onclick="alert('Aquí posteriormente podremos agregar una nueva semana.')">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Agregar semana
+
+                </button>
+
+            </div>
+
+
+            <div class="semanas-admin"
+                 id="contenedor-semanas">
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================================= -->
+        <!-- ACTIVIDADES Y TRABAJOS -->
+        <!-- ========================================= -->
+
+        <section class="seccion-admin">
+
+            <div class="titulo-seccion-admin">
+
+                <div>
+
+                    <h2 id="titulo-actividades">
+
+                        <i class="fa-solid fa-list-check"></i>
+
+                        Semana 01
+
+                    </h2>
+
+                    <p>
+                        Administrar actividades y trabajos
+                    </p>
+
+                </div>
+
+
+                <button class="boton-agregar"
+                        type="button"
+                        onclick="alert('Aquí posteriormente podremos agregar una nueva actividad.')">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Agregar actividad
+
+                </button>
+
+            </div>
+
+
+            <!-- AQUÍ SE CARGAN LAS ACTIVIDADES -->
+
+            <div id="contenedor-actividades">
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================================= -->
+        <!-- AGREGAR NUEVO TRABAJO -->
+        <!-- ========================================= -->
+
+        <section class="seccion-admin formulario-admin">
+
+            <h2>
+
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                Agregar nuevo trabajo
+
+            </h2>
+
+
+            <p class="descripcion-formulario">
+
+                Complete los datos para agregar un nuevo archivo
+                al portafolio.
+
+            </p>
+
+
+            <div class="formulario-grid">
+
+
+                <!-- UNIDAD -->
+
+                <div class="campo-admin">
+
+                    <label for="unidad">
+                        Unidad
+                    </label>
+
+
+                    <select id="unidad">
+
+                        <option>
+                            Unidad 01
+                        </option>
+
+                        <option>
+                            Unidad 02
+                        </option>
+
+                        <option>
+                            Unidad 03
+                        </option>
+
+                        <option>
+                            Unidad 04
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- SEMANA -->
+
+                <div class="campo-admin">
+
+                    <label for="semana">
+                        Semana
+                    </label>
+
+
+                    <select id="semana">
+
+                        <option>
+                            Semana 01
+                        </option>
+
+                        <option>
+                            Semana 02
+                        </option>
+
+                        <option>
+                            Semana 03
+                        </option>
+
+                        <option>
+                            Semana 04
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- ACTIVIDAD -->
+
+                <div class="campo-admin">
+
+                    <label for="actividad">
+                        Actividad
+                    </label>
+
+
+                    <select id="actividad">
+
+                        <option>
+                            Actividad 1
+                        </option>
+
+                        <option>
+                            Actividad 2
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- NOMBRE -->
+
+                <div class="campo-admin">
+
+                    <label for="nombre-trabajo">
+                        Nombre del trabajo
+                    </label>
+
+
+                    <input type="text"
+                           id="nombre-trabajo"
+                           placeholder="Ejemplo: Ejercicio 1">
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ARCHIVO -->
+
+            <div class="campo-admin">
+
+                <label for="archivo">
+                    Seleccionar archivo
+                </label>
+
+
+                <input type="file"
+                       id="archivo">
+
+            </div>
+
+
+
+            <button class="boton-guardar"
+                    type="button"
+                    onclick="guardarTrabajo()">
+
+                <i class="fa-solid fa-floppy-disk"></i>
+
+                Guardar trabajo
+
+            </button>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ========================================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================================= -->
+
+    <script>
+
+
+        /*
+        =====================================================
+        DATOS DEL PORTAFOLIO
+        =====================================================
+        */
+
+
+        const datosPortafolio = {
+
+
+            "Unidad 01": {
+
+
+                "Semana 01": {
+
+
+                    actividades: [
+
+
+                        {
+
+                            nombre: "Actividad 1",
+
+                            trabajos: crearTrabajos(
+                                8,
+                                "Ejercicio",
+                                "Imagen"
+                            )
+
+                        },
+
+
+                        {
+
+                            nombre: "Actividad 2",
+
+                            trabajos: crearTrabajos(
+                                5,
+                                "Ejercicio",
+                                "Imagen"
+                            )
+
+                        }
+
+
+                    ]
+
+                },
+
+
+                "Semana 02": {
+
+
+                    actividades: [
+
+
+                        {
+
+                            nombre: "Actividad 1",
+
+                            trabajos: [
+
+                                trabajo("Ejercicio 1", "Imagen"),
+
+                                trabajo("Ejercicio 2", "Imagen"),
+
+                                trabajo("Ejercicio 3", "Imagen"),
+
+                                trabajo("Ejercicio 4", "Imagen"),
+
+                                trabajo("Ejercicio 5", "Imagen"),
+
+                                trabajo("Ejercicio 6", "Imagen"),
+
+                                trabajo("Ejercicio 7", "Imagen"),
+
+                                trabajo("Ejercicio 8", "Imagen"),
+
+                                trabajo("Ejercicio 9", "Imagen"),
+
+                                trabajo("Ejercicio 10", "Imagen")
+
+                            ]
+
+                        }
+
+
+                    ]
+
+                },
+
+
+                "Semana 03": {
+
+
+                    actividades: [
+
+
+                        {
+
+                            nombre: "Actividad 1",
+
+                            trabajos: [
+
+                                trabajo("Imagen 01", "Imagen"),
+
+                                trabajo("Imagen 02", "Imagen"),
+
+                                trabajo("Imagen 03", "Imagen"),
+
+                                trabajo("Imagen 04", "Imagen"),
+
+                                trabajo("Imagen 05", "Imagen"),
+
+                                trabajo("Imagen 06", "Imagen"),
+
+                                trabajo("Imagen 07", "Imagen"),
+
+                                trabajo("Imagen 08", "Imagen"),
+
+                                trabajo("Imagen 09", "Imagen"),
+
+                                trabajo("Imagen 10", "Imagen"),
+
+                                trabajo("Imagen 11", "Imagen"),
+
+                                trabajo("Imagen 12", "Imagen"),
+
+                                trabajo("Imagen 13", "Imagen"),
+
+                                trabajo("Imagen 14", "Imagen"),
+
+                                trabajo("Imagen 15", "Imagen"),
+
+                                trabajo("Imagen 16", "Imagen"),
+
+                                trabajo("Imagen 17", "Imagen"),
+
+                                trabajo("Imagen 18", "Imagen"),
+
+                                trabajo("Archivo ZIP", "ZIP")
+
+                            ]
+
+                        }
+
+
+                    ]
+
+                },
+
+
+                "Semana 04": {
+
+
+                    actividades: []
+
+                }
+
+            },
+
+
+            "Unidad 02": {
+
+                "Semana 01": { actividades: [] },
+
+                "Semana 02": { actividades: [] },
+
+                "Semana 03": { actividades: [] },
+
+                "Semana 04": { actividades: [] }
+
+            },
+
+
+            "Unidad 03": {
+
+                "Semana 01": { actividades: [] },
+
+                "Semana 02": { actividades: [] },
+
+                "Semana 03": { actividades: [] },
+
+                "Semana 04": { actividades: [] }
+
+            },
+
+
+            "Unidad 04": {
+
+                "Semana 01": { actividades: [] },
+
+                "Semana 02": { actividades: [] },
+
+                "Semana 03": { actividades: [] },
+
+                "Semana 04": { actividades: [] }
+
+            }
+
+        };
+
+
+
+        /*
+        =====================================================
+        CREAR TRABAJOS
+        =====================================================
+        */
+
+
+        function crearTrabajos(cantidad, nombre, tipo) {
+
+
+            const trabajos = [];
+
+
+            for (let i = 1; i <= cantidad; i++) {
+
+
+                trabajos.push({
+
+                    nombre: nombre + " " + i,
+
+                    tipo: tipo
+
+                });
+
+            }
+
+
+            return trabajos;
+
+        }
+
+
+
+        function trabajo(nombre, tipo) {
+
+
+            return {
+
+                nombre: nombre,
+
+                tipo: tipo
+
+            };
+
+        }
+
+
+
+        /*
+        =====================================================
+        ELEMENTOS
+        =====================================================
+        */
+
+
+        const botonesUnidad =
+            document.querySelectorAll(".unidad-admin");
+
+
+        const contenedorSemanas =
+            document.getElementById("contenedor-semanas");
+
+
+        const contenedorActividades =
+            document.getElementById("contenedor-actividades");
+
+
+        const tituloUnidad =
+            document.getElementById("titulo-unidad");
+
+
+        const tituloActividades =
+            document.getElementById("titulo-actividades");
+
+
+
+        /*
+        =====================================================
+        MOSTRAR SEMANAS
+        =====================================================
+        */
+
+
+        function mostrarSemanas(nombreUnidad) {
+
+
+            contenedorSemanas.innerHTML = "";
+
+
+            const semanas =
+                datosPortafolio[nombreUnidad];
+
+
+            let primeraSemana = null;
+
+
+            Object.keys(semanas).forEach(
+                function(nombreSemana, indice) {
+
+
+                    const datosSemana =
+                        semanas[nombreSemana];
+
+
+                    const cantidad =
+                        datosSemana.actividades.length;
+
+
+                    let textoActividades;
+
+
+                    if (cantidad === 0) {
+
+                        textoActividades =
+                            "Sin actividades";
+
+                    }
+                    else if (cantidad === 1) {
+
+                        textoActividades =
+                            "1 actividad";
+
+                    }
+                    else {
+
+                        textoActividades =
+                            cantidad + " actividades";
+
+                    }
+
+
+
+                    const botonSemana =
+                        document.createElement("button");
+
+
+                    botonSemana.type = "button";
+
+
+                    botonSemana.className =
+                        "semana-admin";
+
+
+
+                    if (indice === 0) {
+
+                        botonSemana.classList.add("activa");
+
+                        primeraSemana =
+                            nombreSemana;
+
+                    }
+
+
+
+                    botonSemana.innerHTML = `
+
+                        <span>
+                            ${nombreSemana}
+                        </span>
+
+                        <small>
+                            ${textoActividades}
+                        </small>
+
+                    `;
+
+
+
+                    botonSemana.onclick =
+                        function() {
+
+
+                            document
+                                .querySelectorAll(".semana-admin")
+                                .forEach(
+                                    function(semana) {
+
+                                        semana.classList.remove(
+                                            "activa"
+                                        );
+
+                                    }
+                                );
+
+
+                            botonSemana.classList.add(
+                                "activa"
+                            );
+
+
+                            mostrarActividades(
+                                nombreUnidad,
+                                nombreSemana
+                            );
+
+                        };
+
+
+
+                    contenedorSemanas.appendChild(
+                        botonSemana
+                    );
+
+                }
+            );
+
+
+
+            if (primeraSemana !== null) {
+
+                mostrarActividades(
+                    nombreUnidad,
+                    primeraSemana
+                );
+
+            }
+
+        }
+
+
+
+        /*
+        =====================================================
+        MOSTRAR ACTIVIDADES
+        =====================================================
+        */
+
+
+        function mostrarActividades(
+            nombreUnidad,
+            nombreSemana
+        ) {
+
+
+            tituloActividades.innerHTML = `
+
+                <i class="fa-solid fa-list-check"></i>
+
+                ${nombreSemana}
+
+            `;
+
+
+            contenedorActividades.innerHTML = "";
+
+
+            const datosSemana =
+                datosPortafolio
+                    [nombreUnidad]
+                    [nombreSemana];
+
+
+            const actividades =
+                datosSemana.actividades;
+
+
+
+            if (actividades.length === 0) {
+
+
+                contenedorActividades.innerHTML = `
+
+                    <div class="actividad-admin">
+
+                        <div class="cabecera-actividad">
+
+                            <div>
+
+                                <h3>
+
+                                    <i class="fa-solid fa-folder-open"></i>
+
+                                    Sin actividades
+
+                                </h3>
+
+                                <span>
+                                    Esta semana todavía no tiene trabajos registrados.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                `;
+
+
+                return;
+
+            }
+
+
+
+            actividades.forEach(
+                function(actividad, indiceActividad) {
+
+
+                    const contenedorActividad =
+                        document.createElement("div");
+
+
+                    contenedorActividad.className =
+                        "actividad-admin";
+
+
+
+                    const trabajos =
+                        actividad.trabajos;
+
+
+
+                    let htmlTrabajos = "";
+
+
+
+                    trabajos.forEach(
+                        function(trabajoActual, indiceTrabajo) {
+
+
+                            let icono =
+                                "fa-image";
+
+
+                            if (
+                                trabajoActual.tipo
+                                === "ZIP"
+                            ) {
+
+                                icono =
+                                    "fa-file-zipper";
+
+                            }
+
+
+
+                            htmlTrabajos += `
+
+                                <div class="trabajo-admin">
+
+                                    <div class="informacion-trabajo">
+
+                                        <i class="fa-solid ${icono} icono-archivo"></i>
+
+                                        <div>
+
+                                            <strong>
+                                                ${trabajoActual.nombre}
+                                            </strong>
+
+                                            <span>
+                                                ${trabajoActual.tipo}
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="acciones-trabajo">
+
+                                        <button
+                                            type="button"
+                                            title="Ver"
+                                            onclick="verTrabajo('${nombreUnidad}', '${nombreSemana}', '${actividad.nombre}', ${indiceTrabajo})">
+
+                                            <i class="fa-solid fa-eye"></i>
+
+                                        </button>
+
+
+                                        <button
+                                            type="button"
+                                            title="Descargar"
+                                            onclick="descargarTrabajo('${nombreUnidad}', '${nombreSemana}', '${actividad.nombre}', ${indiceTrabajo})">
+
+                                            <i class="fa-solid fa-download"></i>
+
+                                        </button>
+
+
+                                        <button
+                                            type="button"
+                                            title="Modificar"
+                                            onclick="modificarTrabajo('${nombreUnidad}', '${nombreSemana}', '${actividad.nombre}', ${indiceTrabajo})">
+
+                                            <i class="fa-solid fa-pen"></i>
+
+                                        </button>
+
+
+                                        <button
+                                            type="button"
+                                            class="eliminar"
+                                            title="Eliminar"
+                                            onclick="eliminarTrabajo('${nombreUnidad}', '${nombreSemana}', '${actividad.nombre}', ${indiceTrabajo})">
+
+                                            <i class="fa-solid fa-trash"></i>
+
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            `;
+
+                        }
+                    );
+
+
+
+                    contenedorActividad.innerHTML = `
+
+                        <div class="cabecera-actividad">
+
+                            <div>
+
+                                <h3>
+
+                                    <i class="fa-solid fa-book"></i>
+
+                                    ${actividad.nombre}
+
+                                </h3>
+
+                                <span>
+                                    ${trabajos.length} trabajos registrados
+                                </span>
+
+                            </div>
+
+
+                            <div class="acciones-actividad">
+
+                                <button
+                                    class="boton-editar"
+                                    type="button"
+                                    onclick="modificarActividad('${nombreUnidad}', '${nombreSemana}', ${indiceActividad})">
+
+                                    <i class="fa-solid fa-pen"></i>
+
+                                    Modificar
+
+                                </button>
+
+
+                                <button
+                                    class="boton-eliminar"
+                                    type="button"
+                                    onclick="eliminarActividad('${nombreUnidad}', '${nombreSemana}', ${indiceActividad})">
+
+                                    <i class="fa-solid fa-trash"></i>
+
+                                    Eliminar
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="lista-trabajos">
+
+                            ${htmlTrabajos}
+
+                        </div>
+
+
+                        <button
+                            class="boton-nuevo-trabajo"
+                            type="button"
+                            onclick="agregarTrabajo('${nombreUnidad}', '${nombreSemana}', '${actividad.nombre}')">
+
+                            <i class="fa-solid fa-plus"></i>
+
+                            Agregar trabajo
+
+                        </button>
+
+                    `;
+
+
+
+                    contenedorActividades.appendChild(
+                        contenedorActividad
+                    );
+
+                }
+            );
+
+        }
+
+
+
+        /*
+        =====================================================
+        CLICK EN UNIDADES
+        =====================================================
+        */
+
+
+        botonesUnidad.forEach(
+            function(boton) {
+
+
+                boton.onclick =
+                    function() {
+
+
+                        botonesUnidad.forEach(
+                            function(unidad) {
+
+                                unidad.classList.remove(
+                                    "activa"
+                                );
+
+                            }
+                        );
+
+
+                        boton.classList.add(
+                            "activa"
+                        );
+
+
+                        const nombreUnidad =
+                            boton
+                                .querySelector("span")
+                                .textContent
+                                .trim();
+
+
+                        tituloUnidad.innerHTML = `
+
+                            <i class="fa-solid fa-calendar-week"></i>
+
+                            ${nombreUnidad}
+
+                        `;
+
+
+                        mostrarSemanas(
+                            nombreUnidad
+                        );
+
+                    };
+
+            }
+        );
+
+
+
+        /*
+        =====================================================
+        VER TRABAJO
+        =====================================================
+        */
+
+
+        function verTrabajo(
+            unidad,
+            semana,
+            actividad,
+            indice
+        ) {
+
+
+            const trabajoActual =
+                datosPortafolio
+                    [unidad]
+                    [semana]
+                    .actividades
+                    .find(
+                        function(item) {
+
+                            return item.nombre === actividad;
+
+                        }
+                    )
+                    .trabajos[indice];
+
+
+            alert(
+                "Ver trabajo: " +
+                trabajoActual.nombre
+            );
+
+        }
+
+
+
+        /*
+        =====================================================
+        DESCARGAR TRABAJO
+        =====================================================
+        */
+
+
+        function descargarTrabajo(
+            unidad,
+            semana,
+            actividad,
+            indice
+        ) {
+
+
+            const trabajoActual =
+                datosPortafolio
+                    [unidad]
+                    [semana]
+                    .actividades
+                    .find(
+                        function(item) {
+
+                            return item.nombre === actividad;
+
+                        }
+                    )
+                    .trabajos[indice];
+
+
+            alert(
+                "Aquí conectaremos posteriormente el archivo real para descargar:\n\n"
+                + trabajoActual.nombre
+            );
+
+        }
+
+
+
+        /*
+        =====================================================
+        MODIFICAR TRABAJO
+        =====================================================
+        */
+
+
+        function modificarTrabajo(
+            unidad,
+            semana,
+            actividad,
+            indice
+        ) {
+
+
+            const trabajoActual =
+                datosPortafolio
+                    [unidad]
+                    [semana]
+                    .actividades
+                    .find(
+                        function(item) {
+
+                            return item.nombre === actividad;
+
+                        }
+                    )
+                    .trabajos[indice];
+
+
+            const nuevoNombre =
+                prompt(
+                    "Modificar nombre del trabajo:",
+                    trabajoActual.nombre
+                );
+
+
+            if (
+                nuevoNombre !== null
+                &&
+                nuevoNombre.trim() !== ""
+            ) {
+
+
+                trabajoActual.nombre =
+                    nuevoNombre.trim();
+
+
+                mostrarActividades(
+                    unidad,
+                    semana
+                );
+
+            }
+
+        }
+
+
+
+        /*
+        =====================================================
+        ELIMINAR TRABAJO
+        =====================================================
+        */
+
+
+        function eliminarTrabajo(
+            unidad,
+            semana,
+            actividad,
+            indice
+        ) {
+
+
+            const actividadActual =
+                datosPortafolio
+                    [unidad]
+                    [semana]
+                    .actividades
+                    .find(
+                        function(item) {
+
+                            return item.nombre === actividad;
+
+                        }
+                    );
+
+
+            const trabajoActual =
+                actividadActual.trabajos[indice];
+
+
+            const confirmar =
+                confirm(
+                    "¿Desea eliminar '" +
+                    trabajoActual.nombre +
+                    "'?"
+                );
+
+
+            if (confirmar) {
+
+
+                actividadActual.trabajos.splice(
+                    indice,
+                    1
+                );
+
+
+                mostrarActividades(
+                    unidad,
+                    semana
+                );
+
+            }
+
+        }
+
+
+
+        /*
+        =====================================================
+        MODIFICAR ACTIVIDAD
+        =====================================================
+        */
+
+
+        function modificarActividad(
+            unidad,
+            semana,
+            indice
+        ) {
+
+
+            const actividadActual =
+                datosPortafolio
+                    [unidad]
+                    [semana]
+                    .actividades[indice];
+
+
+            const nuevoNombre =
+                prompt(
+                    "Modificar nombre de la actividad:",
+                    actividadActual.nombre
+                );
+
+
+            if (
+                nuevoNombre !== null
+                &&
+                nuevoNombre.trim() !== ""
+            ) {
+
+
+                actividadActual.nombre =
+                    nuevoNombre.trim();
+
+
+                mostrarActividades(
+                    unidad,
+                    semana
+                );
+
+            }
+
+        }
+
+
+
+        /*
+        =====================================================
+        ELIMINAR ACTIVIDAD
+        =====================================================
+        */
+
+
+        function eliminarActividad(
+            unidad,
+            semana,
+            indice
+        ) {
+
+
+            const confirmar =
+                confirm(
+                    "¿Desea eliminar esta actividad?"
+                );
+
+
+            if (confirmar) {
+
+
+                datosPortafolio
+                    [unidad]
+                    [semana]
+                    .actividades
+                    .splice(
+                        indice,
+                        1
+                    );
+
+
+                mostrarActividades(
+                    unidad,
+                    semana
+                );
+
+            }
+
+        }
+
+
+
+        /*
+        =====================================================
+        AGREGAR TRABAJO
+        =====================================================
+        */
+
+
+        function agregarTrabajo(
+            unidad,
+            semana,
+            actividad
+        ) {
+
+
+            const nombre =
+                prompt(
+                    "Ingrese el nombre del nuevo trabajo:"
+                );
+
+
+            if (
+                nombre === null
+                ||
+                nombre.trim() === ""
+            ) {
+
+                return;
+
+            }
+
+
+            const actividadActual =
+                datosPortafolio
+                    [unidad]
+                    [semana]
+                    .actividades
+                    .find(
+                        function(item) {
+
+                            return item.nombre === actividad;
+
+                        }
+                    );
+
+
+            actividadActual.trabajos.push({
+
+                nombre: nombre.trim(),
+
+                tipo: "Imagen"
+
+            });
+
+
+            mostrarActividades(
+                unidad,
+                semana
+            );
+
+        }
+
+
+
+        /*
+        =====================================================
+        GUARDAR TRABAJO
+        =====================================================
+        */
+
+
+        function guardarTrabajo() {
+
+
+            const nombre =
+                document
+                    .getElementById(
+                        "nombre-trabajo"
+                    )
+                    .value
+                    .trim();
+
+
+            const archivo =
+                document
+                    .getElementById(
+                        "archivo"
+                    )
+                    .files[0];
+
+
+            if (
+                nombre === ""
+                ||
+                !archivo
+            ) {
+
+
+                alert(
+                    "Ingrese el nombre del trabajo y seleccione un archivo."
+                );
+
+
+                return;
+
+            }
+
+
+            alert(
+                "El trabajo '" +
+                nombre +
+                "' está listo para conectarse con la base de datos."
+            );
+
+        }
+
+
+
+        /*
+        =====================================================
+        INICIAR
+        =====================================================
+        */
+
+
+        mostrarSemanas("Unidad 01");
+
+
+    </script>
+
+
+</body>
+
+</html>

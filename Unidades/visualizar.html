@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Visualizar evidencia</title>
+
+    <link rel="stylesheet" href="../css/semana1.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+
+        .visualizar-contenedor {
+            width: 90%;
+            max-width: 1200px;
+
+            margin: 40px auto;
+
+            background: white;
+
+            border-radius: 12px;
+
+            padding: 25px;
+
+            box-sizing: border-box;
+
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+
+            text-align: center;
+        }
+
+
+        .visualizar-contenedor h1 {
+            color: #173b63;
+
+            margin-bottom: 25px;
+        }
+
+
+        .imagen-evidencia {
+            max-width: 100%;
+
+            height: auto;
+
+            display: block;
+
+            margin: 0 auto;
+
+            border-radius: 8px;
+
+            border: 1px solid #d5e3ee;
+        }
+
+
+        .botones-visualizar {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 12px;
+
+            margin-top: 25px;
+        }
+
+
+        .boton-volver,
+        .boton-descargar {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 11px 18px;
+
+            border-radius: 7px;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            transition: 0.2s;
+        }
+
+
+        .boton-volver {
+
+            background: #eef7ff;
+
+            color: #173b63;
+        }
+
+
+        .boton-descargar {
+
+            background: #173b63;
+
+            color: white;
+        }
+
+
+        .boton-volver:hover,
+        .boton-descargar:hover {
+
+            transform: translateY(-2px);
+
+            opacity: 0.9;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<!-- ==============================
+     ENCABEZADO
+=============================== -->
+
+<header class="encabezado">
+
+    <div class="logo">
+
+        <img src="../Imagen/logo.png"
+             alt="Logo UPLA">
+
+    </div>
+
+
+    <nav class="menu">
+
+        <a href="../index.html">
+
+            <i class="fa-solid fa-house"></i>
+
+            Inicio
+
+        </a>
+
+
+        <a href="#">
+
+            <i class="fa-solid fa-user"></i>
+
+            Mi Perfil
+
+        </a>
+
+
+        <a href="unidades.html" class="activo">
+
+            <i class="fa-solid fa-folder"></i>
+
+            Portafolio
+
+        </a>
+
+    </nav>
+
+
+    <div class="informacion-facultad">
+
+        <img src="../Imagen/Ingenieria.jpg"
+             alt="Facultad de Ingeniería">
+
+        <div>
+
+            <strong>
+                Facultad de Ingeniería
+            </strong>
+
+            <p>
+                Escuela Profesional de Ingeniería
+                de Sistemas y Computación
+            </p>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        const parametros =
+            new URLSearchParams(window.location.search);
+
+
+        const imagen =
+            parametros.get("imagen");
+
+
+        const imagenElemento =
+            document.getElementById("imagen-evidencia");
+
+
+        const botonDescargar =
+            document.getElementById("descargar-imagen");
+
+
+        if (imagen) {
+
+            imagenElemento.src = imagen;
+
+            botonDescargar.href = imagen;
+
+        } else {
+
+            imagenElemento.alt =
+                "No se encontró la imagen";
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

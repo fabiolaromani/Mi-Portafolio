@@ -1,0 +1,669 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eafcff,
+            #ffffff,
+            #ddf9ff
+        );
+
+    color: #006fae;
+}
+
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.encabezado {
+
+    height: 145px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 5%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #dffaff,
+            #f2feff,
+            #dffaff
+        );
+
+    border-bottom: 3px solid #a0eaf6;
+}
+
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo img {
+
+    width: 300px;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+
+/* =========================================
+   MENÚ
+========================================= */
+
+.menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.menu a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 18px 20px;
+
+    border-radius: 15px;
+
+    text-decoration: none;
+
+    color: #0074ad;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.menu a i {
+
+    font-size: 23px;
+}
+
+
+.menu a:hover {
+
+    background-color: #c8f5fc;
+}
+
+
+.menu .activo {
+
+    background-color: #b7eff8;
+}
+
+
+
+/* =========================================
+   INFORMACIÓN FACULTAD
+========================================= */
+
+.informacion-facultad {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    max-width: 310px;
+}
+
+
+.informacion-facultad img {
+
+    width: 95px;
+
+    height: 95px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 3px solid white;
+
+    box-shadow:
+        0 0 0 2px #b7eefa;
+}
+
+
+.informacion-facultad strong {
+
+    font-size: 16px;
+
+    color: #006da8;
+}
+
+
+.informacion-facultad p {
+
+    margin-top: 7px;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color: #0075ae;
+}
+
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+main {
+
+    width: 100%;
+
+    padding: 45px 5% 50px;
+}
+
+
+
+/* =========================================
+   TÍTULO DE LA UNIDAD
+========================================= */
+
+.titulo-unidad {
+
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+
+.icono-unidad-principal {
+
+    width: 120px;
+
+    height: 120px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #c5f5fc;
+
+    border-radius: 50%;
+}
+
+
+.icono-unidad-principal i {
+
+    font-size: 60px;
+
+    color: #0079b5;
+}
+
+
+.titulo-unidad h1 {
+
+    font-size: 52px;
+
+    color: #006da8;
+
+    font-weight: 900;
+
+    margin-bottom: 8px;
+}
+
+
+.titulo-unidad h2 {
+
+    font-size: 30px;
+
+    color: #0875ad;
+
+    margin-bottom: 15px;
+}
+
+
+.titulo-unidad p {
+
+    font-size: 20px;
+
+    color: #087db5;
+}
+
+
+
+/* =========================================
+   SEMANAS
+========================================= */
+
+.semanas {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+
+
+/* =========================================
+   TARJETA SEMANA
+========================================= */
+
+.tarjeta-semana {
+
+    min-height: 190px;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    text-decoration: none;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #e7faff
+        );
+
+    border: 2px solid #a4eaf5;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 7px 20px rgba(0, 150, 190, 0.08);
+
+    transition: 0.3s;
+}
+
+
+.tarjeta-semana:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #6bd7eb;
+
+    box-shadow:
+        0 12px 28px rgba(0, 150, 190, 0.17);
+}
+
+
+
+/* =========================================
+   NÚMERO DE SEMANA
+========================================= */
+
+.numero-semana {
+
+    width: 105px;
+
+    height: 105px;
+
+    flex-shrink: 0;
+
+    margin-right: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #baf2fb;
+
+    border-radius: 50%;
+
+    color: #0077b2;
+}
+
+
+.numero-semana i {
+
+    font-size: 25px;
+
+    margin-bottom: 4px;
+}
+
+
+.numero-semana span {
+
+    font-size: 28px;
+
+    font-weight: bold;
+}
+
+
+
+/* =========================================
+   CONTENIDO SEMANA
+========================================= */
+
+.contenido-semana {
+
+    z-index: 2;
+}
+
+
+.contenido-semana h3 {
+
+    font-size: 28px;
+
+    color: #006da8;
+
+    margin-bottom: 8px;
+}
+
+
+.contenido-semana p {
+
+    font-size: 17px;
+
+    color: #087bb5;
+
+    margin-bottom: 12px;
+}
+
+
+.ver-trabajo {
+
+    color: #007ab5;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+
+.ver-trabajo i {
+
+    margin-left: 7px;
+}
+
+
+
+/* =========================================
+   DECORACIÓN DE LAS TARJETAS
+========================================= */
+
+.tarjeta-semana::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+
+    height: 70px;
+
+    left: -60px;
+
+    bottom: -40px;
+
+    background-color: #baf2fb;
+
+    border-radius: 50%;
+
+    opacity: 0.7;
+
+    transform: rotate(8deg);
+}
+
+
+
+/* =========================================
+   VOLVER
+========================================= */
+
+.volver {
+
+    text-align: center;
+
+    margin-top: 40px;
+}
+
+
+.volver a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 13px 25px;
+
+    background-color: #c3f4fb;
+
+    color: #0074ad;
+
+    text-decoration: none;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.volver a:hover {
+
+    background-color: #94e7f3;
+}
+
+
+
+/* =========================================
+   PIE DE PÁGINA
+========================================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 20px;
+
+    color: #0075ad;
+
+    font-size: 15px;
+}
+
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .logo img {
+
+        width: 220px;
+    }
+
+
+    .menu a {
+
+        padding: 12px;
+
+        font-size: 15px;
+    }
+
+
+    .informacion-facultad {
+
+        display: none;
+    }
+
+
+    .titulo-unidad h1 {
+
+        font-size: 42px;
+    }
+
+
+    .semanas {
+
+        width: 100%;
+    }
+
+}
+
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 750px) {
+
+    .encabezado {
+
+        height: auto;
+
+        padding: 15px;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    .logo img {
+
+        width: 220px;
+    }
+
+
+    .menu {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .menu a {
+
+        padding: 10px 14px;
+    }
+
+
+    .titulo-unidad h1 {
+
+        font-size: 35px;
+    }
+
+
+    .titulo-unidad h2 {
+
+        font-size: 22px;
+    }
+
+
+    .titulo-unidad p {
+
+        font-size: 17px;
+    }
+
+
+    .semanas {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .tarjeta-semana {
+
+        min-height: 160px;
+
+        padding: 20px;
+    }
+
+
+    .numero-semana {
+
+        width: 80px;
+
+        height: 80px;
+
+        margin-right: 18px;
+    }
+
+
+    .numero-semana i {
+
+        font-size: 20px;
+    }
+
+
+    .numero-semana span {
+
+        font-size: 23px;
+    }
+
+
+    .contenido-semana h3 {
+
+        font-size: 23px;
+    }
+
+
+    .contenido-semana p {
+
+        font-size: 15px;
+    }
+
+}
