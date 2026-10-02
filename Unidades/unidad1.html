@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Unidad I - Portafolio Académico</title>
+    <title>Unidad I | Portafolio Académico</title>
 
     <link rel="stylesheet" href="../css/unidad1.css">
 
@@ -21,18 +21,48 @@
 
 
     <!-- ==============================
+         FONDO TECNOLÓGICO
+    =============================== -->
+
+    <div class="fondo-grid"></div>
+
+    <div class="orb orb-1"></div>
+
+    <div class="orb orb-2"></div>
+
+
+
+    <!-- ==============================
          ENCABEZADO
     =============================== -->
 
     <header class="encabezado">
 
-        <div class="logo">
 
-            <img src="../Imagen/logo.png"
-                 alt="Logo UPLA">
+        <!-- LOGO -->
+
+        <div class="marca-upla">
+
+            <div class="mini-logo">
+
+                <img src="../Imagen/Upla.png"
+                     alt="Logo UPLA">
+
+            </div>
+
+            <div class="texto-marca">
+
+                <strong>UPLA</strong>
+
+                <span>Ingeniería de Sistemas</span>
+
+            </div>
 
         </div>
 
+
+
+        <!-- MENÚ -->
 
         <nav class="menu">
 
@@ -40,7 +70,7 @@
 
                 <i class="fa-solid fa-house"></i>
 
-                Inicio
+                <span>Inicio</span>
 
             </a>
 
@@ -49,21 +79,24 @@
 
                 <i class="fa-solid fa-user"></i>
 
-                Mi Perfil
+                <span>Mi Perfil</span>
 
             </a>
 
 
-            <a href="unidades.html" class="activo">
+            <a href="Unidades.html" class="activo">
 
-                <i class="fa-solid fa-folder"></i>
+                <i class="fa-solid fa-folder-open"></i>
 
-                Portafolio
+                <span>Portafolio</span>
 
             </a>
 
         </nav>
 
+
+
+        <!-- INFORMACIÓN FACULTAD -->
 
         <div class="informacion-facultad">
 
@@ -72,14 +105,12 @@
 
             <div>
 
-                <strong>
-                    Facultad de Ingeniería
-                </strong>
+                <strong>Facultad de Ingeniería</strong>
 
-                <p>
+                <span>
                     Escuela Profesional de Ingeniería
                     de Sistemas y Computación
-                </p>
+                </span>
 
             </div>
 
@@ -90,25 +121,57 @@
 
 
     <!-- ==============================
-         CONTENIDO
+         CONTENIDO PRINCIPAL
     =============================== -->
 
     <main>
 
 
-        <!-- TÍTULO DE LA UNIDAD -->
+        <!-- RUTA -->
+
+        <div class="ruta-pagina">
+
+            <span class="punto-activo"></span>
+
+            <span>&lt; portafolio / unidad-01 /&gt;</span>
+
+        </div>
+
+
+
+        <!-- ==============================
+             CABECERA DE UNIDAD
+        =============================== -->
 
         <section class="titulo-unidad">
 
-            <div class="icono-unidad-principal">
 
-                <i class="fa-solid fa-book-open"></i>
+            <div class="etiqueta-unidad">
+
+                <i class="fa-solid fa-terminal"></i>
+
+                UNIDAD ACADÉMICA 01
 
             </div>
 
 
+
+            <div class="icono-unidad-principal">
+
+                <div class="circulo-icono">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                </div>
+
+            </div>
+
+
+
             <h1>
-                UNIDAD I
+
+                UNIDAD <span>I</span>
+
             </h1>
 
 
@@ -118,8 +181,85 @@
 
 
             <p>
-                Selecciona una semana para visualizar el trabajo realizado
+                Selecciona una semana para visualizar el trabajo realizado.
             </p>
+
+        </section>
+
+
+
+        <!-- ==============================
+             INFORMACIÓN
+        =============================== -->
+
+        <section class="informacion-unidad">
+
+
+            <div class="dato-unidad">
+
+                <div class="icono-dato">
+
+                    <i class="fa-solid fa-code"></i>
+
+                </div>
+
+                <div>
+
+                    <span>ÁREA</span>
+
+                    <strong>Programación</strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="separador"></div>
+
+
+
+            <div class="dato-unidad">
+
+                <div class="icono-dato">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                </div>
+
+                <div>
+
+                    <span>CONTENIDO</span>
+
+                    <strong>4 semanas</strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="separador"></div>
+
+
+
+            <div class="dato-unidad">
+
+                <div class="icono-dato">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                </div>
+
+                <div>
+
+                    <span>PORTAFOLIO</span>
+
+                    <strong>Unidad I</strong>
+
+                </div>
+
+            </div>
 
         </section>
 
@@ -129,169 +269,287 @@
              SEMANAS
         =============================== -->
 
-        <section class="semanas">
+        <section class="seccion-semanas">
 
 
-            <!-- SEMANA 01 -->
+            <div class="encabezado-semanas">
 
-            <a href="semana1.html" class="tarjeta-semana">
+                <div>
 
-                <div class="numero-semana">
+                    <span class="tag-seccion">
 
-                    <i class="fa-solid fa-calendar-week"></i>
+                        <i class="fa-solid fa-list"></i>
 
-                    <span>01</span>
-
-                </div>
-
-
-                <div class="contenido-semana">
-
-                    <h3>
-                        SEMANA 01
-                    </h3>
-
-                    <p>
-                        Trabajo de la primera semana
-                    </p>
-
-                    <span class="ver-trabajo">
-
-                        Ver trabajo
-
-                        <i class="fa-solid fa-arrow-right"></i>
+                        CONTENIDO
 
                     </span>
 
-                </div>
-
-            </a>
-
-
-
-            <!-- SEMANA 02 -->
-
-            <a href="semana2.html" class="tarjeta-semana">
-
-                <div class="numero-semana">
-
-                    <i class="fa-solid fa-calendar-week"></i>
-
-                    <span>02</span>
+                    <h2>
+                        Semanas de la unidad
+                    </h2>
 
                 </div>
 
 
-                <div class="contenido-semana">
+                <span class="contador-semanas">
+                    04 SEMANAS
+                </span>
 
-                    <h3>
-                        SEMANA 02
-                    </h3>
-
-                    <p>
-                        Trabajo de la segunda semana
-                    </p>
-
-                    <span class="ver-trabajo">
-
-                        Ver trabajo
-
-                        <i class="fa-solid fa-arrow-right"></i>
-
-                    </span>
-
-                </div>
-
-            </a>
+            </div>
 
 
 
-            <!-- SEMANA 03 -->
-
-            <a href="semana3.html" class="tarjeta-semana">
-
-                <div class="numero-semana">
-
-                    <i class="fa-solid fa-calendar-week"></i>
-
-                    <span>03</span>
-
-                </div>
+            <div class="semanas">
 
 
-                <div class="contenido-semana">
+                <!-- ==================
+                     SEMANA 01
+                =================== -->
 
-                    <h3>
-                        SEMANA 03
-                    </h3>
-
-                    <p>
-                        Trabajo de la tercera semana
-                    </p>
-
-                    <span class="ver-trabajo">
-
-                        Ver trabajo
-
-                        <i class="fa-solid fa-arrow-right"></i>
-
-                    </span>
-
-                </div>
-
-            </a>
+                <a href="semana1.html"
+                   class="tarjeta-semana">
 
 
+                    <div class="numero-semana">
 
-            <!-- SEMANA 04 -->
+                        <span>01</span>
 
-            <a href="semana4.html" class="tarjeta-semana">
+                        <i class="fa-solid fa-calendar-week"></i>
 
-                <div class="numero-semana">
-
-                    <i class="fa-solid fa-calendar-week"></i>
-
-                    <span>04</span>
-
-                </div>
+                    </div>
 
 
-                <div class="contenido-semana">
+                    <div class="linea-semana"></div>
 
-                    <h3>
-                        SEMANA 04
-                    </h3>
 
-                    <p>
-                        Trabajo de la cuarta semana
-                    </p>
+                    <div class="contenido-semana">
 
-                    <span class="ver-trabajo">
+                        <span class="tag-semana">
+                            SEMANA 01
+                        </span>
 
-                        Ver trabajo
 
-                        <i class="fa-solid fa-arrow-right"></i>
+                        <h3>
+                            Primera semana
+                        </h3>
 
-                    </span>
 
-                </div>
+                        <p>
+                            Trabajo de la primera semana
+                        </p>
 
-            </a>
 
+                        <span class="ver-trabajo">
+
+                            Ver trabajo
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="flecha-tarjeta">
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- ==================
+                     SEMANA 02
+                =================== -->
+
+                <a href="semana2.html"
+                   class="tarjeta-semana">
+
+
+                    <div class="numero-semana">
+
+                        <span>02</span>
+
+                        <i class="fa-solid fa-calendar-week"></i>
+
+                    </div>
+
+
+                    <div class="linea-semana"></div>
+
+
+                    <div class="contenido-semana">
+
+                        <span class="tag-semana">
+                            SEMANA 02
+                        </span>
+
+
+                        <h3>
+                            Segunda semana
+                        </h3>
+
+
+                        <p>
+                            Trabajo de la segunda semana
+                        </p>
+
+
+                        <span class="ver-trabajo">
+
+                            Ver trabajo
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="flecha-tarjeta">
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- ==================
+                     SEMANA 03
+                =================== -->
+
+                <a href="semana3.html"
+                   class="tarjeta-semana">
+
+
+                    <div class="numero-semana">
+
+                        <span>03</span>
+
+                        <i class="fa-solid fa-calendar-week"></i>
+
+                    </div>
+
+
+                    <div class="linea-semana"></div>
+
+
+                    <div class="contenido-semana">
+
+                        <span class="tag-semana">
+                            SEMANA 03
+                        </span>
+
+
+                        <h3>
+                            Tercera semana
+                        </h3>
+
+
+                        <p>
+                            Trabajo de la tercera semana
+                        </p>
+
+
+                        <span class="ver-trabajo">
+
+                            Ver trabajo
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="flecha-tarjeta">
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- ==================
+                     SEMANA 04
+                =================== -->
+
+                <a href="semana4.html"
+                   class="tarjeta-semana">
+
+
+                    <div class="numero-semana">
+
+                        <span>04</span>
+
+                        <i class="fa-solid fa-calendar-week"></i>
+
+                    </div>
+
+
+                    <div class="linea-semana"></div>
+
+
+                    <div class="contenido-semana">
+
+                        <span class="tag-semana">
+                            SEMANA 04
+                        </span>
+
+
+                        <h3>
+                            Cuarta semana
+                        </h3>
+
+
+                        <p>
+                            Trabajo de la cuarta semana
+                        </p>
+
+
+                        <span class="ver-trabajo">
+
+                            Ver trabajo
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="flecha-tarjeta">
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </div>
+
+                </a>
+
+
+            </div>
 
         </section>
 
 
 
-        <!-- BOTÓN REGRESAR -->
+        <!-- ==============================
+             BOTÓN VOLVER
+        =============================== -->
 
         <div class="volver">
 
-            <a href="unidades.html">
+            <a href="Unidades.html">
 
                 <i class="fa-solid fa-arrow-left"></i>
 
-                Volver a unidades
+                <span>Volver a unidades</span>
 
             </a>
 
@@ -308,9 +566,32 @@
 
     <footer>
 
-        <p>
-            Portafolio Académico © 2026
-        </p>
+        <div class="footer-contenido">
+
+            <div>
+
+                <strong>
+                    FABIOLA ROMANI
+                </strong>
+
+                <span>
+                    Portafolio Académico · 2026
+                </span>
+
+            </div>
+
+
+            <div class="footer-tecnologia">
+
+                <span>&lt;/&gt;</span>
+
+                <span>
+                    Ingeniería de Sistemas
+                </span>
+
+            </div>
+
+        </div>
 
     </footer>
 

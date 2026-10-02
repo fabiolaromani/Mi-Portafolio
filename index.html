@@ -5,172 +5,392 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Portafolio Académico - Fabiola Romani</title>
+    <title>Portafolio Académico | Fabiola Romani</title>
 
     <link rel="stylesheet" href="css/estilos.css">
 
-    <!-- Iconos -->
+    <!-- Font Awesome -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- ================= ENCABEZADO ================= -->
+    <!-- ================= FONDO TECNOLÓGICO ================= -->
 
-    <header class="encabezado">
+    <div class="fondo-grid"></div>
 
-        <!-- Decoración izquierda -->
-        <div class="decoracion decoracion-izquierda"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
 
-        <!-- Logo -->
-        <div class="logo-universidad">
-            <img src="Imagen/Upla.png" alt="Logo UPLA">
-        </div>
 
-        <!-- Información de la universidad -->
-        <div class="datos-universidad">
+    <!-- ================= BARRA SUPERIOR ================= -->
 
-            <h1>UNIVERSIDAD PERUANA LOS ANDES</h1>
+    <header class="barra-superior">
 
-            <div class="facultad">
-                <span></span>
-                <h2>Facultad de Ingeniería</h2>
-                <span></span>
+        <div class="marca-upla">
+
+            <div class="mini-logo">
+                <img src="Imagen/Upla.png" alt="Logo UPLA">
             </div>
 
-            <p>
-                Escuela Profesional de Ingeniería de Sistemas y Computación
-            </p>
+            <div>
+                <strong>UPLA</strong>
+                <span>Ingeniería de Sistemas</span>
+            </div>
 
         </div>
 
-        <!-- Foto de la facultad -->
-        <div class="foto-facultad">
-            <img src="Imagen/Ingenieria.jpg" alt="Facultad de Ingeniería">
+
+        <div class="ruta-pagina">
+
+            <span class="punto-activo"></span>
+
+            <span>PORTAFOLIO ACADÉMICO</span>
+
         </div>
 
-        <!-- Decoración derecha -->
-        <div class="decoracion decoracion-derecha"></div>
+
+        <!-- INICIAR SESIÓN -->
+
+        <a href="login.html" class="tarjeta-login-top">
+
+            <div class="icono-login-top">
+                <i class="fa-solid fa-right-to-bracket"></i>
+            </div>
+
+            <div class="texto-login-top">
+
+                <strong>Iniciar sesión</strong>
+
+                <span>Administrador</span>
+
+            </div>
+
+            <i class="fa-solid fa-chevron-right flecha-login"></i>
+
+        </a>
 
     </header>
 
 
+
     <!-- ================= CONTENIDO PRINCIPAL ================= -->
 
-    <main>
-
-        <section class="portafolio">
-
-            <!-- Decoración inferior -->
-            <div class="onda onda-izquierda"></div>
-            <div class="onda onda-derecha"></div>
+    <main class="contenedor-principal">
 
 
-            <!-- FOTO PERSONAL -->
+        <!-- ETIQUETA DE CÓDIGO -->
 
-            <div class="perfil">
+        <div class="etiqueta-codigo">
 
-               <div class="marco-foto">
+            <span class="terminal-punto"></span>
 
-               <img src="Imagen/fotito.jpg"
-                 alt="Foto personal">
-                
+            <span>&lt; portafolio /&gt;</span>
 
-               </div>
-                <div class="texto-foto">
-                    <i class="fa-solid fa-user"></i>
-                    <span>Foto personal</span>
+        </div>
+
+
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero">
+
+
+            <!-- ================= FOTO ================= -->
+
+            <div class="zona-perfil">
+
+                <div class="decoracion-codigo codigo-1">
+                    <span>01</span>
+                </div>
+
+
+                <div class="marco-foto-moderno">
+
+                    <div class="anillo-foto"></div>
+
+                    <img src="Imagen/fotito.jpg"
+                         alt="Foto personal de Fabiola Romani">
+
+                    <div class="estado-foto">
+
+                        <span></span>
+
+                        Estudiante
+
+                    </div>
+
+                </div>
+
+
+                <div class="mini-etiqueta">
+
+                    <i class="fa-solid fa-code"></i>
+
+                    <span>Systems Engineering</span>
+
                 </div>
 
             </div>
 
 
-            <!-- INFORMACIÓN PERSONAL -->
 
-            <div class="informacion">
+            <!-- ================= PRESENTACIÓN ================= -->
 
-                <div class="titulo-portafolio">
+            <div class="presentacion">
+
+                <span class="eyebrow">
+
+                    <i class="fa-solid fa-terminal"></i>
+
+                    MI PORTAFOLIO ACADÉMICO
+
+                </span>
+
+
+                <h1>
+
+                    Romani Villanueva
+
+                    <span>Fabiola Fariza</span>
+
+                </h1>
+
+
+                <div class="linea-titulo">
+
                     <span></span>
 
-                    <h2>PORTAFOLIO ACADÉMICO</h2>
+                    <p>
+                        Ingeniería de Sistemas y Computación
+                    </p>
 
-                    <span></span>
                 </div>
 
 
-                <h3 class="nombre">
-                    Romani Villanueva Fabiola Fariza
-                </h3>
+                <p class="descripcion-principal">
 
+                    Este espacio reúne los trabajos, actividades y aprendizajes
+                    desarrollados durante el curso de Algoritmo y Estructura
+                    de Datos, organizados en cuatro unidades y sus respectivas semanas.
 
-                <p class="carrera">
-                    Ingeniería de Sistemas y Computación
                 </p>
 
 
-                <!-- DATOS DEL ESTUDIANTE -->
 
-                <div class="datos-estudiante">
+                <!-- ================= DATOS ACADÉMICOS ================= -->
 
-                    <div class="dato">
-                        <i class="fa-solid fa-graduation-cap"></i>
+                <div class="datos-grid">
 
-                        <strong>Ciclo:</strong>
 
-                        <span>IV</span>
+                    <!-- CICLO -->
+
+                    <div class="card-dato">
+
+                        <div class="icono-dato">
+
+                            <i class="fa-solid fa-layer-group"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>CICLO</span>
+
+                            <strong>IV</strong>
+
+                        </div>
+
                     </div>
 
 
-                    <div class="dato">
-                        <i class="fa-solid fa-id-card"></i>
 
-                        <strong>Código:</strong>
+                    <!-- CÓDIGO -->
 
-                        <span>U00058J</span>
+                    <div class="card-dato">
+
+                        <div class="icono-dato">
+
+                            <i class="fa-solid fa-id-card"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>CÓDIGO</span>
+
+                            <strong>U00058J</strong>
+
+                        </div>
+
                     </div>
 
 
-                    <div class="dato">
-                        <i class="fa-solid fa-book-open"></i>
 
-                        <strong>Curso:</strong>
+                    <!-- CURSO -->
 
-                        <span>ALGORITMO Y ESTRUCTURA DE DATOS</span>
+                    <div class="card-dato card-dato-ancho">
+
+                        <div class="icono-dato">
+
+                            <i class="fa-solid fa-book-open"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>CURSO</span>
+
+                            <strong>
+                                Algoritmo y Estructura de Datos
+                            </strong>
+
+                        </div>
+
                     </div>
 
 
-                    <div class="dato">
-                        <i class="fa-solid fa-user-tie"></i>
 
-                        <strong>Docente:</strong>
+                    <!-- DOCENTE -->
+
+                    <div class="card-dato card-dato-ancho">
+
+                        <div class="icono-dato">
+
+                            <i class="fa-solid fa-user-tie"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>DOCENTE</span>
+
+                            <strong>
+                                Fernandez Bejarano Raul Enrique
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= BOTONES ================= -->
+
+                <div class="acciones">
+
+
+                    <a href="Unidades/Unidades.html"
+                       class="boton-principal">
 
                         <span>
-                            Fernandez Bejarano Raul Enrique
+                            EXPLORAR PORTAFOLIO
                         </span>
-                    </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <a href="#informacion"
+                       class="boton-secundario">
+
+                        <i class="fa-solid fa-circle-info"></i>
+
+                        Ver información
+
+                    </a>
 
                 </div>
 
+            </div>
 
-                <!-- DESCRIPCIÓN -->
+        </section>
 
-                <p class="descripcion">
 
-                    Este portafolio presenta los trabajos y actividades
-                    desarrollados durante el curso, organizados en cuatro
-                    unidades y sus respectivas semanas.
+
+        <!-- ================= INFORMACIÓN UPLA ================= -->
+
+        <section class="info-institucional"
+                 id="informacion">
+
+
+            <!-- IMAGEN -->
+
+            <div class="imagen-institucional">
+
+                <img src="Imagen/Ingenieria.jpg"
+                     alt="Facultad de Ingeniería">
+
+                <div class="etiqueta-imagen">
+
+                    <i class="fa-solid fa-building-columns"></i>
+
+                    Facultad de Ingeniería
+
+                </div>
+
+            </div>
+
+
+
+            <!-- INFORMACIÓN -->
+
+            <div class="texto-institucional">
+
+                <span class="seccion-tag">
+
+                    INFORMACIÓN ACADÉMICA
+
+                </span>
+
+
+                <h2>
+
+                    Universidad Peruana Los Andes
+
+                </h2>
+
+
+                <p>
+
+                    Facultad de Ingeniería · Escuela Profesional de
+                    Ingeniería de Sistemas y Computación.
 
                 </p>
 
 
-                <!-- BOTÓN -->
+                <div class="linea-institucional"></div>
 
-                <a href="Unidades/Unidades.html" class="boton">
-                 <i class="fa-regular fa-folder"></i>
-                 <span>VER PORTAFOLIO</span>
-              </a>
 
+                <div class="datos-institucionales">
+
+
+                    <div>
+
+                        <i class="fa-solid fa-building"></i>
+
+                        <span>
+                            Universidad Peruana Los Andes
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-microchip"></i>
+
+                        <span>
+                            Ingeniería de Sistemas y Computación
+                        </span>
+
+                    </div>
+
+                </div>
 
             </div>
 
@@ -179,13 +399,34 @@
     </main>
 
 
-    <!-- ================= PIE DE PÁGINA ================= -->
 
-    <footer>
+    <!-- ================= FOOTER ================= -->
 
-        <p>
-            Portafolio Académico © 2026
-        </p>
+    <footer class="footer-moderno">
+
+
+        <div>
+
+            <strong>
+                FABIOLA ROMANI
+            </strong>
+
+            <span>
+                Portafolio Académico · 2026
+            </span>
+
+        </div>
+
+
+        <div class="footer-code">
+
+            <span>&lt;/&gt;</span>
+
+            <span>
+                Ingeniería de Sistemas
+            </span>
+
+        </div>
 
     </footer>
 

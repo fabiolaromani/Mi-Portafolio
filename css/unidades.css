@@ -1,40 +1,182 @@
-/* =========================================
+/* =========================================================
+   PORTAFOLIO ACADÉMICO - UNIDADES
+   Diseño tecnológico | Ingeniería de Sistemas
+========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+
+    --fondo: #070b14;
+
+    --fondo-secundario: #0b1220;
+
+    --panel: rgba(13, 22, 38, 0.82);
+
+    --panel-hover: rgba(17, 31, 52, 0.96);
+
+    --azul: #35a9ff;
+
+    --cian: #35e0ff;
+
+    --azul-oscuro: #0875c9;
+
+    --texto: #edf7ff;
+
+    --texto-suave: #91a8bd;
+
+    --borde: rgba(67, 188, 255, 0.22);
+
+    --glow: rgba(35, 185, 255, 0.20);
+
+}
+
+
+/* =========================================================
    CONFIGURACIÓN GENERAL
-========================================= */
+========================================================= */
 
 * {
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
 }
 
 
 body {
 
-    font-family: Arial, Helvetica, sans-serif;
-
     min-height: 100vh;
 
-    background:
-        linear-gradient(
-            135deg,
-            #eafcff,
-            #ffffff,
-            #ddf9ff
-        );
+    font-family: Arial, Helvetica, sans-serif;
 
-    color: #006fae;
+    color: var(--texto);
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(26, 128, 210, 0.12),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 70%,
+            rgba(0, 207, 255, 0.08),
+            transparent 30%
+        ),
+        var(--fondo);
+
+    overflow-x: hidden;
+
 }
 
 
+/* =========================================================
+   FONDO DE CUADRÍCULA
+========================================================= */
 
-/* =========================================
+.fondo-grid {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -3;
+
+    background-image:
+        linear-gradient(
+            rgba(52, 169, 255, 0.045) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(52, 169, 255, 0.045) 1px,
+            transparent 1px
+        );
+
+    background-size: 42px 42px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black 0%,
+            rgba(0,0,0,0.8) 60%,
+            transparent 100%
+        );
+
+}
+
+
+/* =========================================================
+   ORBES DE LUZ
+========================================================= */
+
+.orb {
+
+    position: fixed;
+
+    border-radius: 50%;
+
+    filter: blur(80px);
+
+    pointer-events: none;
+
+    z-index: -2;
+
+}
+
+
+.orb-1 {
+
+    width: 280px;
+
+    height: 280px;
+
+    top: 80px;
+
+    left: -100px;
+
+    background: rgba(0, 151, 255, 0.13);
+
+}
+
+
+.orb-2 {
+
+    width: 320px;
+
+    height: 320px;
+
+    right: -130px;
+
+    bottom: 100px;
+
+    background: rgba(0, 217, 255, 0.10);
+
+}
+
+
+/* =========================================================
    ENCABEZADO
-========================================= */
+========================================================= */
 
 .encabezado {
 
-    height: 145px;
+    min-height: 92px;
+
+    width: 100%;
 
     display: flex;
 
@@ -42,53 +184,117 @@ body {
 
     justify-content: space-between;
 
-    padding: 0 5%;
+    gap: 25px;
+
+    padding: 16px 5%;
 
     background:
-        linear-gradient(
-            90deg,
-            #dffaff,
-            #f2feff,
-            #dffaff
-        );
+        rgba(7, 13, 25, 0.88);
 
-    border-bottom: 3px solid #a0eaf6;
+    border-bottom: 1px solid var(--borde);
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.20);
+
+    backdrop-filter: blur(16px);
 
     position: relative;
 
-    overflow: hidden;
+    z-index: 10;
+
 }
 
 
+/* =========================================================
+   MARCA UPLA
+========================================================= */
 
-/* =========================================
-   LOGO
-========================================= */
-
-.logo {
+.marca-upla {
 
     display: flex;
 
     align-items: center;
 
-    z-index: 2;
+    gap: 13px;
+
+    flex-shrink: 0;
+
 }
 
 
-.logo img {
+.mini-logo {
 
-    width: 300px;
+    width: 55px;
 
-    height: auto;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 6px;
+
+    border: 1px solid var(--borde);
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    box-shadow:
+        0 0 25px rgba(53, 169, 255, 0.12);
+
+}
+
+
+.mini-logo img {
+
+    width: 100%;
+
+    height: 100%;
 
     object-fit: contain;
+
 }
 
 
+.texto-marca {
 
-/* =========================================
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+}
+
+
+.texto-marca strong {
+
+    font-size: 17px;
+
+    letter-spacing: 1px;
+
+    color: var(--texto);
+
+}
+
+
+.texto-marca span {
+
+    font-size: 11px;
+
+    color: var(--texto-suave);
+
+    letter-spacing: 0.5px;
+
+}
+
+
+/* =========================================================
    MENÚ
-========================================= */
+========================================================= */
 
 .menu {
 
@@ -96,9 +302,8 @@ body {
 
     align-items: center;
 
-    gap: 8px;
+    gap: 6px;
 
-    z-index: 2;
 }
 
 
@@ -108,46 +313,70 @@ body {
 
     align-items: center;
 
-    gap: 12px;
+    gap: 9px;
 
-    padding: 18px 20px;
+    padding: 11px 15px;
 
-    border-radius: 15px;
+    color: var(--texto-suave);
 
     text-decoration: none;
 
-    color: #0074ad;
+    font-size: 14px;
 
-    font-size: 17px;
+    font-weight: 600;
 
-    font-weight: bold;
+    border: 1px solid transparent;
 
-    transition: 0.3s;
+    border-radius: 10px;
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        border 0.3s ease,
+        transform 0.3s ease;
+
 }
 
 
 .menu a i {
 
-    font-size: 23px;
+    font-size: 15px;
+
 }
 
 
 .menu a:hover {
 
-    background-color: #c8f5fc;
+    color: var(--texto);
+
+    background: rgba(53, 169, 255, 0.08);
+
+    border-color: rgba(53, 169, 255, 0.12);
+
+    transform: translateY(-1px);
+
 }
 
 
 .menu .activo {
 
-    background-color: #b7eff8;
+    color: var(--cian);
+
+    background:
+        rgba(53, 169, 255, 0.10);
+
+    border-color:
+        rgba(53, 169, 255, 0.20);
+
+    box-shadow:
+        0 0 18px rgba(53, 169, 255, 0.06);
+
 }
 
 
-
-/* =========================================
+/* =========================================================
    INFORMACIÓN FACULTAD
-========================================= */
+========================================================= */
 
 .informacion-facultad {
 
@@ -155,86 +384,127 @@ body {
 
     align-items: center;
 
-    gap: 15px;
+    gap: 12px;
 
-    max-width: 310px;
+    max-width: 300px;
 
-    z-index: 2;
 }
 
 
 .informacion-facultad img {
 
-    width: 95px;
+    width: 53px;
 
-    height: 95px;
+    height: 53px;
 
-    border-radius: 50%;
+    flex-shrink: 0;
 
     object-fit: cover;
 
-    border: 3px solid white;
+    border-radius: 50%;
+
+    border: 2px solid rgba(53, 224, 255, 0.35);
 
     box-shadow:
-        0 0 0 2px #b7eefa;
+        0 0 18px rgba(53, 169, 255, 0.12);
+
 }
 
 
 .informacion-facultad strong {
 
-    font-size: 16px;
+    display: block;
 
-    color: #006da8;
+    color: var(--texto);
+
+    font-size: 13px;
+
 }
 
 
 .informacion-facultad p {
 
-    margin-top: 7px;
+    margin-top: 4px;
 
-    font-size: 14px;
+    color: var(--texto-suave);
 
-    line-height: 1.5;
+    font-size: 10px;
 
-    color: #0075ae;
+    line-height: 1.4;
+
 }
 
 
-
-/* =========================================
-   CONTENIDO
-========================================= */
+/* =========================================================
+   CONTENIDO PRINCIPAL
+========================================================= */
 
 main {
 
-    width: 100%;
+    width: min(1400px, 92%);
 
-    padding: 30px 3% 50px;
+    margin: 0 auto;
+
+    padding: 38px 0 70px;
+
 }
 
 
+/* =========================================================
+   ETIQUETA DE PÁGINA
+========================================================= */
 
-/* =========================================
+.etiqueta-pagina {
+
+    width: fit-content;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 28px;
+
+    padding: 8px 13px;
+
+    color: var(--texto-suave);
+
+    font-family: monospace;
+
+    font-size: 12px;
+
+    background:
+        rgba(53, 169, 255, 0.06);
+
+    border: 1px solid var(--borde);
+
+    border-radius: 8px;
+
+}
+
+
+.terminal-punto {
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--cian);
+
+    box-shadow:
+        0 0 10px var(--cian);
+
+}
+
+
+/* =========================================================
    TÍTULO
-========================================= */
+========================================================= */
 
 .titulo {
-
-    text-align: center;
-
-    margin-bottom: 35px;
-
-    position: relative;
-}
-
-
-.icono-carpeta {
-
-    width: 130px;
-
-    height: 130px;
-
-    margin: 0 auto 10px;
 
     display: flex;
 
@@ -242,154 +512,20 @@ main {
 
     justify-content: center;
 
-    background-color: #d0f8ff;
+    gap: 25px;
 
-    border-radius: 50%;
+    text-align: left;
+
+    margin-bottom: 28px;
+
 }
 
 
-.icono-carpeta i {
+.icono-carpeta {
 
-    font-size: 70px;
+    width: 92px;
 
-    color: #007db7;
-}
-
-
-.titulo h1 {
-
-    font-size: 52px;
-
-    color: #006ba5;
-
-    font-weight: 900;
-
-    margin-bottom: 5px;
-}
-
-
-.titulo h2 {
-
-    font-size: 32px;
-
-    color: #0874ad;
-
-    margin-bottom: 10px;
-}
-
-
-.titulo p {
-
-    font-size: 24px;
-
-    color: #0078b4;
-}
-
-
-
-/* =========================================
-   MENSAJE
-========================================= */
-
-.mensaje {
-
-    width: fit-content;
-
-    margin: 28px auto 0;
-
-    padding: 13px 30px;
-
-    background-color: #bdf3fb;
-
-    border-radius: 30px;
-
-    font-size: 22px;
-
-    color: #0076b1;
-}
-
-
-
-/* =========================================
-   GRID DE UNIDADES
-========================================= */
-
-.unidades {
-
-    width: 95%;
-
-    max-width: 1500px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 40px;
-}
-
-
-
-/* =========================================
-   TARJETAS
-========================================= */
-
-.tarjeta {
-
-    min-height: 220px;
-
-    padding: 30px;
-
-    display: flex;
-
-    align-items: center;
-
-    position: relative;
-
-    overflow: hidden;
-
-    text-decoration: none;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255,255,255,0.96),
-            rgba(230,250,255,0.95)
-        );
-
-    border: 2px solid #a5eaf5;
-
-    border-radius: 22px;
-
-    box-shadow:
-        0 8px 20px rgba(0, 160, 200, 0.08);
-
-    transition: 0.3s;
-}
-
-
-.tarjeta:hover {
-
-    transform: translateY(-6px);
-
-    box-shadow:
-        0 12px 30px rgba(0, 150, 190, 0.18);
-
-    border-color: #6ed9ed;
-}
-
-
-
-/* =========================================
-   ICONO DE UNIDAD
-========================================= */
-
-.icono-unidad {
-
-    width: 120px;
-
-    height: 120px;
+    height: 92px;
 
     flex-shrink: 0;
 
@@ -399,73 +535,142 @@ main {
 
     justify-content: center;
 
-    background-color: #baf2fb;
+    border-radius: 24px;
 
-    border-radius: 50%;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(53, 169, 255, 0.16),
+            rgba(53, 224, 255, 0.06)
+        );
 
-    margin-right: 35px;
+    border: 1px solid rgba(53, 169, 255, 0.24);
+
+    box-shadow:
+        0 0 35px rgba(53, 169, 255, 0.08);
+
 }
 
 
-.icono-unidad i {
+.icono-carpeta i {
 
-    font-size: 58px;
+    font-size: 42px;
 
-    color: #0079b5;
+    color: var(--cian);
+
+    filter:
+        drop-shadow(
+            0 0 12px rgba(53, 224, 255, 0.35)
+        );
+
 }
 
 
+.titulo-texto {
 
-/* =========================================
-   CONTENIDO TARJETA
-========================================= */
+    min-width: 0;
 
-.contenido-tarjeta {
-
-    padding-right: 60px;
 }
 
 
-.contenido-tarjeta h3 {
+.seccion-tag {
 
-    font-size: 37px;
+    display: inline-block;
 
-    color: #006da8;
+    margin-bottom: 7px;
 
-    margin-bottom: 12px;
+    color: var(--cian);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
 }
 
 
-.contenido-tarjeta p {
+.titulo h1 {
 
-    font-size: 21px;
+    font-size: clamp(34px, 4vw, 54px);
 
-    line-height: 1.4;
+    line-height: 1;
 
-    color: #087bb5;
+    color: var(--texto);
+
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+
 }
 
 
+.titulo h2 {
 
-/* =========================================
-   FLECHA
-========================================= */
+    margin-top: 10px;
 
-.flecha {
+    color: #c4d8e8;
 
-    position: absolute;
+    font-size: 18px;
 
-    right: 25px;
+    font-weight: 500;
 
-    top: 50%;
+}
 
-    transform: translateY(-50%);
 
-    width: 55px;
+.titulo p {
 
-    height: 55px;
+    margin-top: 5px;
 
-    border-radius: 50%;
+    color: var(--texto-suave);
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   INFORMACIÓN DEL CURSO
+========================================================= */
+
+.informacion-curso {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+
+    margin: 0 auto 18px;
+
+    padding: 18px 22px;
+
+    background:
+        linear-gradient(
+            110deg,
+            rgba(53, 169, 255, 0.10),
+            rgba(53, 224, 255, 0.035)
+        );
+
+    border: 1px solid rgba(53, 169, 255, 0.20);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.12);
+
+}
+
+
+.icono-curso {
+
+    width: 48px;
+
+    height: 48px;
+
+    flex-shrink: 0;
 
     display: flex;
 
@@ -473,46 +678,220 @@ main {
 
     justify-content: center;
 
-    background-color: #b9f1fa;
+    border-radius: 12px;
+
+    background:
+        rgba(53, 169, 255, 0.12);
+
+    border: 1px solid rgba(53, 169, 255, 0.18);
+
 }
 
 
-.flecha i {
+.icono-curso i {
 
-    font-size: 25px;
+    color: var(--cian);
 
-    color: #0076b1;
+    font-size: 20px;
+
 }
 
 
+.datos-curso {
 
-/* =========================================
-   DECORACIÓN INFERIOR
-========================================= */
+    display: flex;
 
-.tarjeta::after {
+    flex-direction: column;
 
-    content: "";
+    gap: 4px;
 
-    position: absolute;
+}
 
-    width: 350px;
 
-    height: 80px;
+.datos-curso span {
 
-    left: -50px;
+    color: var(--texto-suave);
 
-    bottom: -45px;
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.datos-curso strong {
+
+    color: var(--texto);
+
+    font-size: 17px;
+
+}
+
+
+.indicador-curso {
+
+    margin-left: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+
+.indicador-curso span {
+
+    width: 7px;
+
+    height: 7px;
 
     border-radius: 50%;
 
-    background-color: #b8f2fb;
+    background: var(--cian);
 
-    opacity: 0.7;
+    box-shadow:
+        0 0 10px var(--cian);
 
-    transform: rotate(8deg);
 }
 
+
+.indicador-curso p {
+
+    color: var(--texto-suave);
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   MENSAJE
+========================================================= */
+
+.mensaje {
+
+    width: fit-content;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin: 0 auto 28px;
+
+    padding: 9px 15px;
+
+    color: var(--texto-suave);
+
+    font-size: 12px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    border-radius: 30px;
+
+}
+
+
+.mensaje i {
+
+    color: var(--azul);
+
+}
+
+
+/* =========================================================
+   GRID DE UNIDADES
+========================================================= */
+
+.unidades {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+
+}
+
+
+/* =========================================================
+   TARJETAS
+========================================================= */
+
+.tarjeta {
+
+    min-height: 215px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 28px;
+
+    overflow: hidden;
+
+    text-decoration: none;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(14, 25, 43, 0.90),
+            rgba(9, 17, 30, 0.96)
+        );
+
+    border: 1px solid var(--borde);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+
+}
+
+
+.tarjeta:hover {
+
+    transform: translateY(-6px);
+
+    border-color:
+        rgba(53, 224, 255, 0.42);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(17, 32, 53, 0.96),
+            rgba(10, 21, 37, 0.98)
+        );
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.28),
+        0 0 30px rgba(53, 169, 255, 0.08);
+
+}
+
+
+/* =========================================================
+   LÍNEA LUMINOSA SUPERIOR
+========================================================= */
 
 .tarjeta::before {
 
@@ -520,142 +899,447 @@ main {
 
     position: absolute;
 
-    width: 300px;
+    top: 0;
 
-    height: 60px;
+    left: 0;
 
-    right: -100px;
+    width: 85px;
 
-    bottom: -30px;
+    height: 2px;
 
-    border-radius: 50%;
-
-    background-color: #d1f8fd;
+    background:
+        linear-gradient(
+            90deg,
+            var(--cian),
+            transparent
+        );
 
     opacity: 0.9;
 
-    transform: rotate(-8deg);
 }
 
 
+/* =========================================================
+   DECORACIÓN INTERIOR
+========================================================= */
 
-/* =========================================
+.tarjeta::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 180px;
+
+    right: -100px;
+
+    bottom: -100px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(53, 169, 255, 0.08);
+
+    box-shadow:
+        0 0 0 25px rgba(53, 169, 255, 0.025),
+        0 0 0 50px rgba(53, 169, 255, 0.015);
+
+}
+
+
+/* =========================================================
+   NÚMERO DE UNIDAD
+========================================================= */
+
+.numero-unidad {
+
+    position: absolute;
+
+    top: 16px;
+
+    right: 20px;
+
+    color: rgba(145, 168, 189, 0.28);
+
+    font-family: monospace;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================================================
+   ICONO DE UNIDAD
+========================================================= */
+
+.icono-unidad {
+
+    width: 78px;
+
+    height: 78px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(53, 169, 255, 0.14),
+            rgba(53, 224, 255, 0.05)
+        );
+
+    border: 1px solid rgba(53, 169, 255, 0.20);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+
+}
+
+
+.tarjeta:hover .icono-unidad {
+
+    transform: scale(1.06);
+
+    box-shadow:
+        0 0 25px rgba(53, 169, 255, 0.10);
+
+}
+
+
+.icono-unidad i {
+
+    font-size: 32px;
+
+    color: var(--cian);
+
+    filter:
+        drop-shadow(
+            0 0 8px rgba(53, 224, 255, 0.20)
+        );
+
+}
+
+
+/* =========================================================
+   CONTENIDO DE TARJETA
+========================================================= */
+
+.contenido-tarjeta {
+
+    min-width: 0;
+
+    padding-right: 45px;
+
+}
+
+
+.etiqueta-unidad {
+
+    display: inline-block;
+
+    margin-bottom: 7px;
+
+    color: var(--azul);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.contenido-tarjeta h3 {
+
+    color: var(--texto);
+
+    font-size: 21px;
+
+    line-height: 1.25;
+
+    font-weight: 700;
+
+}
+
+
+.contenido-tarjeta p {
+
+    margin-top: 9px;
+
+    color: var(--texto-suave);
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   FLECHA
+========================================================= */
+
+.flecha {
+
+    position: absolute;
+
+    right: 22px;
+
+    bottom: 22px;
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(53, 169, 255, 0.08);
+
+    border: 1px solid rgba(53, 169, 255, 0.16);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.flecha i {
+
+    color: var(--azul);
+
+    font-size: 14px;
+
+}
+
+
+.tarjeta:hover .flecha {
+
+    background:
+        rgba(53, 169, 255, 0.16);
+
+    transform: translateX(4px);
+
+}
+
+
+/* =========================================================
    PIE DE PÁGINA
-========================================= */
+========================================================= */
 
 footer {
 
-    text-align: center;
+    width: min(1400px, 92%);
 
-    padding: 20px;
+    margin: 0 auto;
 
-    color: #0075ad;
+    padding-bottom: 25px;
 
-    font-size: 15px;
 }
 
 
+.footer-line {
 
-/* =========================================
+    width: 100%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(53, 169, 255, 0.22),
+            transparent
+        );
+
+    margin-bottom: 20px;
+
+}
+
+
+.footer-contenido {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+}
+
+
+.footer-contenido > div:first-child {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+}
+
+
+.footer-contenido strong {
+
+    color: var(--texto);
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.footer-contenido span {
+
+    color: var(--texto-suave);
+
+    font-size: 10px;
+
+}
+
+
+.footer-tecnologia {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+
+.footer-tecnologia span:first-child {
+
+    color: var(--cian);
+
+    font-family: monospace;
+
+}
+
+
+/* =========================================================
    TABLET
-========================================= */
+========================================================= */
 
 @media (max-width: 1100px) {
 
-    .logo img {
+    .encabezado {
 
-        width: 220px;
-    }
+        padding: 14px 3%;
 
-
-    .menu a {
-
-        padding: 12px;
-
-        font-size: 15px;
     }
 
 
     .informacion-facultad {
 
         display: none;
+
     }
 
 
-    .titulo h1 {
+    .unidades {
 
-        font-size: 42px;
+        gap: 16px;
+
+    }
+
+
+    .tarjeta {
+
+        padding: 23px;
+
+    }
+
+
+    .icono-unidad {
+
+        width: 68px;
+
+        height: 68px;
+
+    }
+
+
+    .icono-unidad i {
+
+        font-size: 28px;
+
     }
 
 
     .contenido-tarjeta h3 {
 
-        font-size: 30px;
+        font-size: 18px;
+
     }
 
 }
 
 
+/* =========================================================
+   TABLET PEQUEÑA
+========================================================= */
 
-/* =========================================
-   CELULAR
-========================================= */
-
-@media (max-width: 750px) {
+@media (max-width: 850px) {
 
     .encabezado {
 
-        height: auto;
+        flex-wrap: wrap;
 
-        padding: 15px;
+        justify-content: center;
 
-        flex-direction: column;
-
-        gap: 10px;
     }
 
 
-    .logo img {
+    .marca-upla {
 
-        width: 220px;
+        width: 100%;
+
+        justify-content: center;
+
     }
 
 
     .menu {
 
-        flex-wrap: wrap;
+        width: 100%;
 
         justify-content: center;
+
     }
 
 
-    .menu a {
+    .titulo {
 
-        padding: 10px 14px;
-    }
+        flex-direction: column;
 
+        text-align: center;
 
-    .titulo h1 {
-
-        font-size: 32px;
-    }
-
-
-    .titulo h2 {
-
-        font-size: 23px;
-    }
-
-
-    .titulo p {
-
-        font-size: 18px;
-    }
-
-
-    .mensaje {
-
-        font-size: 17px;
     }
 
 
@@ -663,55 +1347,297 @@ footer {
 
         grid-template-columns: 1fr;
 
-        gap: 20px;
-
-        width: 100%;
     }
 
 
     .tarjeta {
 
-        min-height: 180px;
+        min-height: 190px;
 
-        padding: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    main {
+
+        width: 90%;
+
+        padding-top: 25px;
+
     }
 
 
-    .icono-unidad {
+    .encabezado {
 
-        width: 85px;
+        padding: 13px 15px;
 
-        height: 85px;
+        gap: 12px;
 
-        margin-right: 20px;
     }
 
 
-    .icono-unidad i {
+    .menu {
 
-        font-size: 40px;
+        gap: 3px;
+
     }
 
 
-    .contenido-tarjeta h3 {
+    .menu a {
 
-        font-size: 25px;
+        padding: 9px 10px;
+
+        font-size: 12px;
+
     }
 
 
-    .contenido-tarjeta p {
+    .menu a i {
 
-        font-size: 16px;
+        font-size: 13px;
+
     }
 
 
-    .flecha {
+    .etiqueta-pagina {
+
+        font-size: 10px;
+
+    }
+
+
+    .titulo {
+
+        gap: 15px;
+
+    }
+
+
+    .icono-carpeta {
+
+        width: 75px;
+
+        height: 75px;
+
+        border-radius: 20px;
+
+    }
+
+
+    .icono-carpeta i {
+
+        font-size: 32px;
+
+    }
+
+
+    .titulo h1 {
+
+        font-size: 34px;
+
+    }
+
+
+    .titulo h2 {
+
+        font-size: 15px;
+
+    }
+
+
+    .titulo p {
+
+        font-size: 12px;
+
+    }
+
+
+    .informacion-curso {
+
+        align-items: flex-start;
+
+        padding: 15px;
+
+    }
+
+
+    .icono-curso {
 
         width: 42px;
 
         height: 42px;
 
+    }
+
+
+    .datos-curso strong {
+
+        font-size: 14px;
+
+        line-height: 1.3;
+
+    }
+
+
+    .indicador-curso {
+
+        display: none;
+
+    }
+
+
+    .mensaje {
+
+        text-align: center;
+
+        font-size: 11px;
+
+    }
+
+
+    .tarjeta {
+
+        min-height: 175px;
+
+        padding: 22px 18px;
+
+        gap: 14px;
+
+        border-radius: 17px;
+
+    }
+
+
+    .icono-unidad {
+
+        width: 60px;
+
+        height: 60px;
+
+        border-radius: 15px;
+
+    }
+
+
+    .icono-unidad i {
+
+        font-size: 25px;
+
+    }
+
+
+    .contenido-tarjeta {
+
+        padding-right: 28px;
+
+    }
+
+
+    .contenido-tarjeta h3 {
+
+        font-size: 17px;
+
+    }
+
+
+    .contenido-tarjeta p {
+
+        font-size: 11px;
+
+    }
+
+
+    .flecha {
+
+        width: 32px;
+
+        height: 32px;
+
         right: 15px;
+
+        bottom: 15px;
+
+    }
+
+
+    .flecha i {
+
+        font-size: 11px;
+
+    }
+
+
+    .footer-contenido {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR PEQUEÑO
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .menu a span {
+
+        display: none;
+
+    }
+
+
+    .menu a {
+
+        width: 40px;
+
+        height: 40px;
+
+        justify-content: center;
+
+        padding: 0;
+
+    }
+
+
+    .tarjeta {
+
+        padding: 18px 14px;
+
+    }
+
+
+    .icono-unidad {
+
+        width: 52px;
+
+        height: 52px;
+
+    }
+
+
+    .icono-unidad i {
+
+        font-size: 21px;
+
+    }
+
+
+    .contenido-tarjeta h3 {
+
+        font-size: 15px;
+
     }
 
 }

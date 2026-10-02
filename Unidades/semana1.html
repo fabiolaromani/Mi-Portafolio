@@ -2,7 +2,9 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Semana 01 - Portafolio Académico</title>
@@ -11,131 +13,314 @@
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+
+        /* ==================================================
+           VISOR DE IMÁGENES
+        ================================================== */
+
+        .visor-imagen {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            inset: 0;
+
+            background: rgba(0, 0, 0, 0.88);
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 30px;
+        }
+
+        .visor-imagen.activo {
+            display: flex;
+        }
+
+        .visor-contenido {
+            position: relative;
+
+            max-width: 850px;
+            max-height: 85vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .visor-contenido img {
+            display: block;
+
+            max-width: 800px;
+            max-height: 75vh;
+
+            width: auto;
+            height: auto;
+
+            object-fit: contain;
+
+            border-radius: 10px;
+
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+        }
+
+        /* BOTÓN X */
+
+        .cerrar-visor {
+            position: absolute;
+
+            top: -45px;
+            right: -5px;
+
+            width: 38px;
+            height: 38px;
+
+            border: none;
+            border-radius: 50%;
+
+            background: #ef4444;
+            color: white;
+
+            font-size: 20px;
+
+            cursor: pointer;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            transition: 0.2s ease;
+
+            z-index: 10000;
+        }
+
+        .cerrar-visor:hover {
+            transform: scale(1.08);
+            background: #dc2626;
+        }
+
+        /* BOTONES DE ACCIÓN */
+
+        .acciones {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-accion {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 38px;
+            height: 38px;
+
+            text-decoration: none;
+
+            border-radius: 8px;
+
+            cursor: pointer;
+
+            transition: all 0.2s ease;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 700px) {
+
+            .visor-imagen {
+                padding: 20px;
+            }
+
+            .visor-contenido {
+                max-width: 95%;
+            }
+
+            .visor-contenido img {
+                max-width: 100%;
+                max-height: 70vh;
+            }
+
+            .cerrar-visor {
+                top: -45px;
+                right: 0;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
+
     <!-- ==============================
-     ENCABEZADO
-=============================== -->
+         ENCABEZADO
+    =============================== -->
 
-<header class="encabezado">
+    <header class="encabezado">
 
-    <div class="logo">
+        <div class="logo">
 
-        <img src="../Imagen/logo.png"
-             alt="Logo UPLA">
-
-    </div>
-
-
-    <nav class="menu">
-
-        <a href="../index.html">
-
-            <i class="fa-solid fa-house"></i>
-
-            Inicio
-
-        </a>
-
-
-        <a href="#">
-
-            <i class="fa-solid fa-user"></i>
-
-            Mi Perfil
-
-        </a>
-
-
-        <a href="unidades.html" class="activo">
-
-            <i class="fa-solid fa-folder"></i>
-
-            Portafolio
-
-        </a>
-
-    </nav>
-
-
-    <div class="informacion-facultad">
-
-        <img src="../Imagen/Ingenieria.jpg"
-             alt="Facultad de Ingeniería">
-
-        <div>
-
-            <strong>
-                Facultad de Ingeniería
-            </strong>
-
-            <p>
-                Escuela Profesional de Ingeniería
-                de Sistemas y Computación
-            </p>
+            <img src="../Imagen/logo.png"
+                 alt="Logo UPLA">
 
         </div>
 
-    </div>
 
-</header>
+        <nav class="menu">
+
+            <a href="../index.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                Inicio
+
+            </a>
+
+
+            <a href="#">
+
+                <i class="fa-solid fa-user"></i>
+
+                Mi Perfil
+
+            </a>
+
+
+            <a href="Unidades.html" class="activo">
+
+                <i class="fa-solid fa-folder"></i>
+
+                Portafolio
+
+            </a>
+
+        </nav>
+
+
+        <div class="informacion-facultad">
+
+            <img src="../Imagen/Ingenieria.jpg"
+                 alt="Facultad de Ingeniería">
+
+            <div>
+
+                <strong>
+                    Facultad de Ingeniería
+                </strong>
+
+                <p>
+                    Escuela Profesional de Ingeniería
+                    de Sistemas y Computación
+                </p>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
 
     <!-- RUTA -->
+
     <div class="ruta">
-        <a href="../unidades.html">Portafolio</a>
+
+        <a href="Unidades.html">
+            Portafolio
+        </a>
+
         <i class="fa-solid fa-angle-right"></i>
 
-        <a href="../unidad1.html">Unidad I</a>
+        <a href="unidad1.html">
+            Unidad I
+        </a>
+
         <i class="fa-solid fa-angle-right"></i>
 
-        <span>Semana 01</span>
+        <span>
+            Semana 01
+        </span>
+
     </div>
+
 
 
     <!-- ENCABEZADO DE SEMANA -->
+
     <section class="encabezado-semana">
 
         <i class="fa-solid fa-calendar-week"></i>
 
         <div>
+
             <h1>Semana 01</h1>
-            <p>Trabajos y evidencias de aprendizaje</p>
+
+            <p>
+                Trabajos y evidencias de aprendizaje
+            </p>
+
         </div>
 
     </section>
 
 
+
     <!-- CONTENIDO -->
+
     <main class="contenedor">
 
 
         <!-- INFORMACIÓN -->
+
         <section class="informacion">
 
-            <h2>Estructuras Fundamentales</h2>
+            <h2>
+                Estructuras Fundamentales
+            </h2>
 
             <p>
                 En esta semana se desarrollaron diferentes métodos para trabajar
                 con arreglos y operaciones relacionadas con el manejo de datos.
             </p>
 
+
             <div class="datos">
 
                 <div>
+
                     <strong>Curso:</strong>
-                    <span>Algoritmo y Estructura de Datos</span>
+
+                    <span>
+                        Algoritmo y Estructura de Datos
+                    </span>
+
                 </div>
 
+
                 <div>
+
                     <strong>Semana:</strong>
-                    <span>01</span>
+
+                    <span>
+                        01
+                    </span>
+
                 </div>
 
+
                 <div>
+
                     <strong>Estudiante:</strong>
-                    <span>Romani Villanueva Fabiola Fariza</span>
+
+                    <span>
+                        Romani Villanueva Fabiola Fariza
+                    </span>
+
                 </div>
 
             </div>
@@ -144,9 +329,9 @@
 
 
 
-        <!-- ================================================== -->
-        <!-- ACTIVIDAD 1 -->
-        <!-- ================================================== -->
+        <!-- ==================================================
+             ACTIVIDAD 1
+        ================================================== -->
 
         <section class="actividad">
 
@@ -154,21 +339,31 @@
                 01
             </div>
 
+
             <div class="contenido-actividad">
 
-                <h2>Métodos para trabajar con arreglos</h2>
+                <h2>
+                    Métodos para trabajar con arreglos
+                </h2>
+
 
                 <p class="descripcion-actividad">
+
                     En esta actividad se desarrollaron diferentes métodos
                     para realizar operaciones sobre un arreglo.
+
                     Cada evidencia muestra el funcionamiento de uno
                     de los métodos implementados.
+
                 </p>
 
 
                 <h3 class="titulo-material">
+
                     <i class="fa-solid fa-images"></i>
+
                     Evidencias de la actividad
+
                 </h3>
 
 
@@ -176,24 +371,54 @@
 
 
                     <!-- 01 ELIMINAR -->
+
                     <div class="archivo">
 
                         <div class="archivo-icono">
+
                             <i class="fa-regular fa-image"></i>
+
                         </div>
 
+
                         <div class="archivo-nombre">
-                            <strong>Eliminar un elemento del arreglo</strong>
-                            <span>Actividad 1 - Evidencia 01</span>
+
+                            <strong>
+                                Eliminar un elemento del arreglo
+                            </strong>
+
+                            <span>
+                                Actividad 1 - Evidencia 01
+                            </span>
+
                         </div>
+
 
                         <div class="acciones">
 
-                            <a href="../Imagen/Actividad1/Actividad1.png"
-                               class="btn-accion"
-                               download
-                               title="Descargar imagen">
+                            <!-- VISUALIZAR -->
+
+                            <button
+                                type="button"
+                                class="btn-accion btn-visualizar"
+                                onclick="abrirImagen('../Imagen/Actividad1/Actividad1.png')"
+                                title="Visualizar imagen">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+
+                            <!-- DESCARGAR -->
+
+                            <a
+                                href="../Imagen/Actividad1/Actividad1.png"
+                                class="btn-accion"
+                                download
+                                title="Descargar imagen">
+
                                 <i class="fa-solid fa-download"></i>
+
                             </a>
 
                         </div>
@@ -203,24 +428,50 @@
 
 
                     <!-- 02 MODIFICAR -->
+
                     <div class="archivo">
 
                         <div class="archivo-icono">
+
                             <i class="fa-regular fa-image"></i>
+
                         </div>
 
+
                         <div class="archivo-nombre">
-                            <strong>Modificar un elemento del arreglo</strong>
-                            <span>Actividad 1 - Evidencia 02</span>
+
+                            <strong>
+                                Modificar un elemento del arreglo
+                            </strong>
+
+                            <span>
+                                Actividad 1 - Evidencia 02
+                            </span>
+
                         </div>
+
 
                         <div class="acciones">
 
-                            <a href="../Imagen/Actividad1/Actividad2.png"
-                               class="btn-accion"
-                               download
-                               title="Descargar imagen">
+                            <button
+                                type="button"
+                                class="btn-accion btn-visualizar"
+                                onclick="abrirImagen('../Imagen/Actividad1/Actividad2.png')"
+                                title="Visualizar imagen">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+
+                            <a
+                                href="../Imagen/Actividad1/Actividad2.png"
+                                class="btn-accion"
+                                download
+                                title="Descargar imagen">
+
                                 <i class="fa-solid fa-download"></i>
+
                             </a>
 
                         </div>
@@ -230,24 +481,50 @@
 
 
                     <!-- 03 INSERTAR -->
+
                     <div class="archivo">
 
                         <div class="archivo-icono">
+
                             <i class="fa-regular fa-image"></i>
+
                         </div>
 
+
                         <div class="archivo-nombre">
-                            <strong>Insertar un elemento en una posición determinada</strong>
-                            <span>Actividad 1 - Evidencia 03</span>
+
+                            <strong>
+                                Insertar un elemento en una posición determinada
+                            </strong>
+
+                            <span>
+                                Actividad 1 - Evidencia 03
+                            </span>
+
                         </div>
+
 
                         <div class="acciones">
 
-                            <a href="../Imagen/Actividad1/Actividad3.png"
-                               class="btn-accion"
-                               download
-                               title="Descargar imagen">
+                            <button
+                                type="button"
+                                class="btn-accion btn-visualizar"
+                                onclick="abrirImagen('../Imagen/Actividad1/Actividad3.png')"
+                                title="Visualizar imagen">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+
+                            <a
+                                href="../Imagen/Actividad1/Actividad3.png"
+                                class="btn-accion"
+                                download
+                                title="Descargar imagen">
+
                                 <i class="fa-solid fa-download"></i>
+
                             </a>
 
                         </div>
@@ -257,24 +534,50 @@
 
 
                     <!-- 04 SUMAR -->
+
                     <div class="archivo">
 
                         <div class="archivo-icono">
+
                             <i class="fa-regular fa-image"></i>
+
                         </div>
 
+
                         <div class="archivo-nombre">
-                            <strong>Sumar los elementos del arreglo</strong>
-                            <span>Actividad 1 - Evidencia 04</span>
+
+                            <strong>
+                                Sumar los elementos del arreglo
+                            </strong>
+
+                            <span>
+                                Actividad 1 - Evidencia 04
+                            </span>
+
                         </div>
+
 
                         <div class="acciones">
 
-                            <a href="../Imagen/Actividad1/Actividad4.png"
-                               class="btn-accion"
-                               download
-                               title="Descargar imagen">
+                            <button
+                                type="button"
+                                class="btn-accion btn-visualizar"
+                                onclick="abrirImagen('../Imagen/Actividad1/Actividad4.png')"
+                                title="Visualizar imagen">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+
+                            <a
+                                href="../Imagen/Actividad1/Actividad4.png"
+                                class="btn-accion"
+                                download
+                                title="Descargar imagen">
+
                                 <i class="fa-solid fa-download"></i>
+
                             </a>
 
                         </div>
@@ -284,24 +587,50 @@
 
 
                     <!-- 05 MENOR MAYOR PROMEDIO -->
+
                     <div class="archivo">
 
                         <div class="archivo-icono">
+
                             <i class="fa-regular fa-image"></i>
+
                         </div>
 
+
                         <div class="archivo-nombre">
-                            <strong>Hallar número menor, mayor y promedio</strong>
-                            <span>Actividad 1 - Evidencia 05</span>
+
+                            <strong>
+                                Hallar número menor, mayor y promedio
+                            </strong>
+
+                            <span>
+                                Actividad 1 - Evidencia 05
+                            </span>
+
                         </div>
+
 
                         <div class="acciones">
 
-                            <a href="../Imagen/Actividad1/Actividad 5.png"
-                               class="btn-accion"
-                               download
-                               title="Descargar imagen">
+                            <button
+                                type="button"
+                                class="btn-accion btn-visualizar"
+                                onclick="abrirImagen('../Imagen/Actividad1/Actividad 5.png')"
+                                title="Visualizar imagen">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+
+                            <a
+                                href="../Imagen/Actividad1/Actividad 5.png"
+                                class="btn-accion"
+                                download
+                                title="Descargar imagen">
+
                                 <i class="fa-solid fa-download"></i>
+
                             </a>
 
                         </div>
@@ -311,24 +640,50 @@
 
 
                     <!-- 06 IMPARES -->
+
                     <div class="archivo">
 
                         <div class="archivo-icono">
+
                             <i class="fa-regular fa-image"></i>
+
                         </div>
 
+
                         <div class="archivo-nombre">
-                            <strong>Sumar elementos impares</strong>
-                            <span>Actividad 1 - Evidencia 06</span>
+
+                            <strong>
+                                Sumar elementos impares
+                            </strong>
+
+                            <span>
+                                Actividad 1 - Evidencia 06
+                            </span>
+
                         </div>
+
 
                         <div class="acciones">
 
-                            <a href="../Imagen/Actividad1/Actividad6.png"
-                               class="btn-accion"
-                               download
-                               title="Descargar imagen">
+                            <button
+                                type="button"
+                                class="btn-accion btn-visualizar"
+                                onclick="abrirImagen('../Imagen/Actividad1/Actividad6.png')"
+                                title="Visualizar imagen">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+
+                            <a
+                                href="../Imagen/Actividad1/Actividad6.png"
+                                class="btn-accion"
+                                download
+                                title="Descargar imagen">
+
                                 <i class="fa-solid fa-download"></i>
+
                             </a>
 
                         </div>
@@ -338,24 +693,50 @@
 
 
                     <!-- 07 PRIMER ELEMENTO -->
+
                     <div class="archivo">
 
                         <div class="archivo-icono">
+
                             <i class="fa-regular fa-image"></i>
+
                         </div>
 
+
                         <div class="archivo-nombre">
-                            <strong>Mover primer elemento a la última posición</strong>
-                            <span>Actividad 1 - Evidencia 07</span>
+
+                            <strong>
+                                Mover primer elemento a la última posición
+                            </strong>
+
+                            <span>
+                                Actividad 1 - Evidencia 07
+                            </span>
+
                         </div>
+
 
                         <div class="acciones">
 
-                            <a href="../Imagen/Actividad1/Actividad7.png"
-                               class="btn-accion"
-                               download
-                               title="Descargar imagen">
+                            <button
+                                type="button"
+                                class="btn-accion btn-visualizar"
+                                onclick="abrirImagen('../Imagen/Actividad1/Actividad7.png')"
+                                title="Visualizar imagen">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+
+                            <a
+                                href="../Imagen/Actividad1/Actividad7.png"
+                                class="btn-accion"
+                                download
+                                title="Descargar imagen">
+
                                 <i class="fa-solid fa-download"></i>
+
                             </a>
 
                         </div>
@@ -365,29 +746,56 @@
 
 
                     <!-- 08 PRIMER PAR -->
+
                     <div class="archivo">
 
                         <div class="archivo-icono">
+
                             <i class="fa-regular fa-image"></i>
+
                         </div>
 
+
                         <div class="archivo-nombre">
-                            <strong>Mover primer par al final del arreglo</strong>
-                            <span>Actividad 1 - Evidencia 08</span>
+
+                            <strong>
+                                Mover primer par al final del arreglo
+                            </strong>
+
+                            <span>
+                                Actividad 1 - Evidencia 08
+                            </span>
+
                         </div>
+
 
                         <div class="acciones">
 
-                           <a href="../Imagen/Actividad1/Actividad8.png"
-                               class="btn-accion"
-                               download
-                               title="Descargar imagen">
+                            <button
+                                type="button"
+                                class="btn-accion btn-visualizar"
+                                onclick="abrirImagen('../Imagen/Actividad1/Actividad8.png')"
+                                title="Visualizar imagen">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+
+                            <a
+                                href="../Imagen/Actividad1/Actividad8.png"
+                                class="btn-accion"
+                                download
+                                title="Descargar imagen">
+
                                 <i class="fa-solid fa-download"></i>
+
                             </a>
 
                         </div>
 
                     </div>
+
 
                 </div>
 
@@ -397,9 +805,9 @@
 
 
 
-        <!-- ================================================== -->
-        <!-- ACTIVIDAD 2 -->
-        <!-- ================================================== -->
+        <!-- ==================================================
+             ACTIVIDAD 2
+        ================================================== -->
 
         <section class="actividad">
 
@@ -407,20 +815,29 @@
                 02
             </div>
 
+
             <div class="contenido-actividad">
 
-                <h2>Cálculo del promedio de prácticas</h2>
+                <h2>
+                    Cálculo del promedio de prácticas
+                </h2>
+
 
                 <p class="descripcion-actividad">
+
                     En esta actividad se desarrolló un programa para
                     ingresar, almacenar y procesar las notas de las
                     prácticas, aplicando diferentes operaciones.
+
                 </p>
 
 
                 <h3 class="titulo-material">
+
                     <i class="fa-solid fa-images"></i>
+
                     Evidencias de la actividad
+
                 </h3>
 
 
@@ -428,24 +845,50 @@
 
 
                     <!-- 01 INGRESO NOTAS -->
+
                     <div class="archivo">
 
                         <div class="archivo-icono">
+
                             <i class="fa-regular fa-image"></i>
+
                         </div>
 
+
                         <div class="archivo-nombre">
-                            <strong>Ingreso y almacenamiento de notas</strong>
-                            <span>Actividad 2 - Evidencia 01</span>
+
+                            <strong>
+                                Ingreso y almacenamiento de notas
+                            </strong>
+
+                            <span>
+                                Actividad 2 - Evidencia 01
+                            </span>
+
                         </div>
+
 
                         <div class="acciones">
 
-                            <a href="../Imagen/Actividad1/Ejercicio1.png"
-                               class="btn-accion"
-                               download
-                               title="Descargar imagen">
+                            <button
+                                type="button"
+                                class="btn-accion btn-visualizar"
+                                onclick="abrirImagen('../Imagen/Actividad1/Ejercicio1.png')"
+                                title="Visualizar imagen">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+
+                            <a
+                                href="../Imagen/Actividad1/Ejercicio1.png"
+                                class="btn-accion"
+                                download
+                                title="Descargar imagen">
+
                                 <i class="fa-solid fa-download"></i>
+
                             </a>
 
                         </div>
@@ -455,24 +898,50 @@
 
 
                     <!-- 02 ELIMINAR NOTA -->
+
                     <div class="archivo">
 
                         <div class="archivo-icono">
+
                             <i class="fa-regular fa-image"></i>
+
                         </div>
 
+
                         <div class="archivo-nombre">
-                            <strong>Eliminación de la práctica con nota más baja</strong>
-                            <span>Actividad 2 - Evidencia 02</span>
+
+                            <strong>
+                                Eliminación de la práctica con nota más baja
+                            </strong>
+
+                            <span>
+                                Actividad 2 - Evidencia 02
+                            </span>
+
                         </div>
+
 
                         <div class="acciones">
 
-                            <a href="../Imagen/Actividad1/Ejercicio2.png"
-                               class="btn-accion"
-                               download
-                               title="Descargar imagen">
+                            <button
+                                type="button"
+                                class="btn-accion btn-visualizar"
+                                onclick="abrirImagen('../Imagen/Actividad1/Ejercicio2.png')"
+                                title="Visualizar imagen">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+
+                            <a
+                                href="../Imagen/Actividad1/Ejercicio2.png"
+                                class="btn-accion"
+                                download
+                                title="Descargar imagen">
+
                                 <i class="fa-solid fa-download"></i>
+
                             </a>
 
                         </div>
@@ -482,24 +951,50 @@
 
 
                     <!-- 03 PROMEDIO -->
+
                     <div class="archivo">
 
                         <div class="archivo-icono">
+
                             <i class="fa-regular fa-image"></i>
+
                         </div>
 
+
                         <div class="archivo-nombre">
-                            <strong>Cálculo del promedio de prácticas</strong>
-                            <span>Actividad 2 - Evidencia 03</span>
+
+                            <strong>
+                                Cálculo del promedio de prácticas
+                            </strong>
+
+                            <span>
+                                Actividad 2 - Evidencia 03
+                            </span>
+
                         </div>
+
 
                         <div class="acciones">
 
-                           <a href="../Imagen/Actividad1/ejercicio3.png"
-                               class="btn-accion"
-                               download
-                               title="Descargar imagen">
+                            <button
+                                type="button"
+                                class="btn-accion btn-visualizar"
+                                onclick="abrirImagen('../Imagen/Actividad1/ejercicio3.png')"
+                                title="Visualizar imagen">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+
+                            <a
+                                href="../Imagen/Actividad1/ejercicio3.png"
+                                class="btn-accion"
+                                download
+                                title="Descargar imagen">
+
                                 <i class="fa-solid fa-download"></i>
+
                             </a>
 
                         </div>
@@ -509,24 +1004,50 @@
 
 
                     <!-- 04 REDONDEADO -->
+
                     <div class="archivo">
 
                         <div class="archivo-icono">
+
                             <i class="fa-regular fa-image"></i>
+
                         </div>
 
+
                         <div class="archivo-nombre">
-                            <strong>Mostrar promedio redondeado</strong>
-                            <span>Actividad 2 - Evidencia 04</span>
+
+                            <strong>
+                                Mostrar promedio redondeado
+                            </strong>
+
+                            <span>
+                                Actividad 2 - Evidencia 04
+                            </span>
+
                         </div>
+
 
                         <div class="acciones">
 
-                            <a href="../Imagen/Actividad1/ejercicio4.png"
-                               class="btn-accion"
-                               download
-                               title="Descargar imagen">
+                            <button
+                                type="button"
+                                class="btn-accion btn-visualizar"
+                                onclick="abrirImagen('../Imagen/Actividad1/ejercicio4.png')"
+                                title="Visualizar imagen">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+
+                            <a
+                                href="../Imagen/Actividad1/ejercicio4.png"
+                                class="btn-accion"
+                                download
+                                title="Descargar imagen">
+
                                 <i class="fa-solid fa-download"></i>
+
                             </a>
 
                         </div>
@@ -536,29 +1057,56 @@
 
 
                     <!-- 05 VALIDACION -->
+
                     <div class="archivo">
 
                         <div class="archivo-icono">
+
                             <i class="fa-regular fa-image"></i>
+
                         </div>
 
+
                         <div class="archivo-nombre">
-                            <strong>Validación del ingreso de datos</strong>
-                            <span>Actividad 2 - Evidencia 05</span>
+
+                            <strong>
+                                Validación del ingreso de datos
+                            </strong>
+
+                            <span>
+                                Actividad 2 - Evidencia 05
+                            </span>
+
                         </div>
+
 
                         <div class="acciones">
 
-                            <a href="../Imagen/Actividad1/ejercicio5.png"
-                               class="btn-accion"
-                               download
-                               title="Descargar imagen">
+                            <button
+                                type="button"
+                                class="btn-accion btn-visualizar"
+                                onclick="abrirImagen('../Imagen/Actividad1/ejercicio5.png')"
+                                title="Visualizar imagen">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+
+                            <a
+                                href="../Imagen/Actividad1/ejercicio5.png"
+                                class="btn-accion"
+                                download
+                                title="Descargar imagen">
+
                                 <i class="fa-solid fa-download"></i>
+
                             </a>
 
                         </div>
 
                     </div>
+
 
                 </div>
 
@@ -568,23 +1116,118 @@
 
 
 
-       
-    <!-- VOLVER -->
+        <!-- VOLVER -->
 
-    <div class="volver">
+        <div class="volver">
 
-        <a href="unidad1.html">
+            <a href="unidad1.html">
 
-            <i class="fa-solid fa-arrow-left"></i>
+                <i class="fa-solid fa-arrow-left"></i>
 
-            Volver a Unidad I
+                Volver a Unidad I
 
-        </a>
+            </a>
 
-    </div>
+        </div>
 
 
     </main>
 
+
+
+    <!-- ==================================================
+         VISOR DE IMAGEN
+    ================================================== -->
+
+    <div
+        id="visorImagen"
+        class="visor-imagen"
+        onclick="cerrarImagen(event)">
+
+        <div
+            class="visor-contenido"
+            onclick="event.stopPropagation()">
+
+            <button
+                type="button"
+                class="cerrar-visor"
+                onclick="cerrarImagen()"
+                title="Cerrar">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+            <img
+                id="imagenVisualizada"
+                src=""
+                alt="Imagen visualizada">
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         JAVASCRIPT DEL VISOR
+    ================================================== -->
+
+    <script>
+
+        function abrirImagen(ruta) {
+
+            const visor = document.getElementById("visorImagen");
+
+            const imagen = document.getElementById("imagenVisualizada");
+
+            imagen.src = ruta;
+
+            visor.classList.add("activo");
+
+            document.body.style.overflow = "hidden";
+
+        }
+
+
+        function cerrarImagen(event) {
+
+            if (event && event.target !== event.currentTarget) {
+                return;
+            }
+
+            const visor = document.getElementById("visorImagen");
+
+            const imagen = document.getElementById("imagenVisualizada");
+
+            visor.classList.remove("activo");
+
+            imagen.src = "";
+
+            document.body.style.overflow = "";
+
+        }
+
+
+        document.addEventListener("keydown", function(event) {
+
+            if (event.key === "Escape") {
+
+                const visor = document.getElementById("visorImagen");
+
+                if (visor.classList.contains("activo")) {
+
+                    cerrarImagen();
+
+                }
+
+            }
+
+        });
+
+    </script>
+
+
 </body>
+
 </html>

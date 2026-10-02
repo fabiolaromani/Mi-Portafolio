@@ -5,114 +5,531 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Visualizar evidencia</title>
+    <title>Visualizar Evidencia - Portafolio Académico</title>
 
+    <!-- MISMO CSS DE LAS SEMANAS -->
     <link rel="stylesheet" href="../css/semana1.css">
 
+    <!-- ICONOS -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+
     <style>
 
+        /* =====================================================
+           CORRECCIÓN DEL ENCABEZADO
+           MISMO ESTILO DE LAS SEMANAS
+        ===================================================== */
+
+        .encabezado {
+
+            display: flex !important;
+
+            align-items: center !important;
+
+            justify-content: space-between !important;
+
+            width: 100% !important;
+
+            min-height: 90px !important;
+
+            box-sizing: border-box !important;
+
+            padding: 15px 45px !important;
+
+        }
+
+
+        /* LOGO UPLA */
+
+        .encabezado .logo {
+
+            display: flex !important;
+
+            align-items: center !important;
+
+            flex-shrink: 0 !important;
+
+        }
+
+
+        .encabezado .logo img {
+
+            width: 125px !important;
+
+            height: auto !important;
+
+            max-height: 55px !important;
+
+            object-fit: contain !important;
+
+        }
+
+
+        /* MENÚ */
+
+        .encabezado .menu {
+
+            display: flex !important;
+
+            align-items: center !important;
+
+            gap: 10px !important;
+
+            margin-left: 25px !important;
+
+            margin-right: 25px !important;
+
+        }
+
+
+        .encabezado .menu a {
+
+            display: flex !important;
+
+            align-items: center !important;
+
+            gap: 8px !important;
+
+            white-space: nowrap !important;
+
+        }
+
+
+        /* INFORMACIÓN DE LA FACULTAD */
+
+        .encabezado .info-facultad {
+
+            display: flex !important;
+
+            align-items: center !important;
+
+            gap: 12px !important;
+
+            margin-left: auto !important;
+
+            flex-shrink: 0 !important;
+
+        }
+
+
+        /* ESTA ES LA CORRECCIÓN PRINCIPAL */
+
+        .encabezado .info-facultad img {
+
+            width: 52px !important;
+
+            height: 52px !important;
+
+            min-width: 52px !important;
+
+            max-width: 52px !important;
+
+            min-height: 52px !important;
+
+            max-height: 52px !important;
+
+            object-fit: cover !important;
+
+            border-radius: 50% !important;
+
+            display: block !important;
+
+        }
+
+
+        .encabezado .info-facultad div {
+
+            display: flex !important;
+
+            flex-direction: column !important;
+
+            justify-content: center !important;
+
+        }
+
+
+        .encabezado .info-facultad strong {
+
+            display: block !important;
+
+            color: #ffffff !important;
+
+            font-size: 14px !important;
+
+            line-height: 1.3 !important;
+
+        }
+
+
+        .encabezado .info-facultad span {
+
+            display: block !important;
+
+            color: #9fb3c8 !important;
+
+            font-size: 12px !important;
+
+            line-height: 1.3 !important;
+
+        }
+
+
+
+        /* =====================================================
+           CONTENEDOR DE VISUALIZACIÓN
+        ===================================================== */
+
         .visualizar-contenedor {
+
             width: 90%;
-            max-width: 1200px;
 
-            margin: 40px auto;
+            max-width: 1100px;
 
-            background: white;
+            margin: 45px auto;
 
-            border-radius: 12px;
+            padding: 30px;
 
-            padding: 25px;
+            background: rgba(10, 22, 38, 0.85);
+
+            border: 1px solid rgba(0, 200, 255, 0.20);
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            box-shadow: 0 0 30px rgba(0, 170, 255, 0.08);
+
+        }
+
+
+        /* =====================================================
+           TÍTULO
+        ===================================================== */
+
+        .visualizar-titulo {
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .visualizar-titulo h1 {
+
+            margin: 0 0 8px;
+
+            color: #ffffff;
+
+            font-size: 28px;
+
+        }
+
+
+        .visualizar-titulo p {
+
+            margin: 0;
+
+            color: #9fb3c8;
+
+            font-size: 15px;
+
+        }
+
+
+        /* =====================================================
+           CONTENEDOR DE IMAGEN
+        ===================================================== */
+
+        .contenedor-imagen {
+
+            width: 100%;
+
+            min-height: 300px;
+
+            padding: 20px;
 
             box-sizing: border-box;
 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-
-            text-align: center;
-        }
-
-
-        .visualizar-contenedor h1 {
-            color: #173b63;
-
-            margin-bottom: 25px;
-        }
-
-
-        .imagen-evidencia {
-            max-width: 100%;
-
-            height: auto;
-
-            display: block;
-
-            margin: 0 auto;
-
-            border-radius: 8px;
-
-            border: 1px solid #d5e3ee;
-        }
-
-
-        .botones-visualizar {
             display: flex;
 
             justify-content: center;
 
-            gap: 12px;
+            align-items: center;
 
-            margin-top: 25px;
+            background: rgba(2, 8, 16, 0.55);
+
+            border: 1px solid rgba(255, 255, 255, 0.08);
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
         }
 
 
-        .boton-volver,
-        .boton-descargar {
+        /* =====================================================
+           IMAGEN DE LA EVIDENCIA
+        ===================================================== */
+
+        .imagen-evidencia {
+
+            display: block;
+
+            max-width: 100%;
+
+            max-height: 75vh;
+
+            width: auto;
+
+            height: auto;
+
+            object-fit: contain;
+
+            border-radius: 10px;
+
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.40);
+
+        }
+
+
+        /* =====================================================
+           MENSAJE DE ERROR
+        ===================================================== */
+
+        .mensaje-error {
+
+            display: none;
+
+            color: #ff8f8f;
+
+            font-size: 16px;
+
+            line-height: 1.6;
+
+            padding: 30px;
+
+        }
+
+
+        .mensaje-error i {
+
+            display: block;
+
+            margin-bottom: 12px;
+
+            font-size: 38px;
+
+        }
+
+
+        /* =====================================================
+           BOTONES
+        ===================================================== */
+
+        .botones-visualizar {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 15px;
+
+            margin-top: 25px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .boton-visualizar {
 
             display: inline-flex;
 
             align-items: center;
 
+            justify-content: center;
+
             gap: 8px;
 
-            padding: 11px 18px;
+            padding: 12px 22px;
 
-            border-radius: 7px;
+            border-radius: 10px;
 
             text-decoration: none;
 
-            font-size: 14px;
+            font-weight: 600;
 
-            transition: 0.2s;
+            transition: all 0.3s ease;
+
         }
 
+
+        /* BOTÓN VOLVER */
 
         .boton-volver {
 
-            background: #eef7ff;
+            color: #ffffff;
 
-            color: #173b63;
+            background: rgba(255, 255, 255, 0.08);
+
+            border: 1px solid rgba(255, 255, 255, 0.15);
+
         }
 
+
+        .boton-volver:hover {
+
+            background: rgba(255, 255, 255, 0.15);
+
+            transform: translateY(-2px);
+
+        }
+
+
+        /* BOTÓN DESCARGAR */
 
         .boton-descargar {
 
-            background: #173b63;
+            color: #ffffff;
 
-            color: white;
+            background: linear-gradient(
+                135deg,
+                #0077ff,
+                #00bfff
+            );
+
+            border: 1px solid rgba(255, 255, 255, 0.08);
+
         }
 
 
-        .boton-volver:hover,
         .boton-descargar:hover {
 
             transform: translateY(-2px);
 
-            opacity: 0.9;
+            box-shadow:
+                0 8px 20px rgba(0, 170, 255, 0.25);
+
+        }
+
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .encabezado {
+
+                padding: 15px 25px !important;
+
+            }
+
+
+            .encabezado .menu {
+
+                margin-left: 10px !important;
+
+                margin-right: 10px !important;
+
+            }
+
+
+            .encabezado .info-facultad span {
+
+                display: none !important;
+
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .encabezado {
+
+                flex-wrap: wrap !important;
+
+                gap: 15px !important;
+
+                justify-content: center !important;
+
+            }
+
+
+            .encabezado .menu {
+
+                order: 3 !important;
+
+                width: 100% !important;
+
+                justify-content: center !important;
+
+            }
+
+
+            .encabezado .info-facultad {
+
+                margin-left: 0 !important;
+
+            }
+
+
+            .visualizar-contenedor {
+
+                width: 92%;
+
+                margin: 30px auto;
+
+                padding: 20px;
+
+            }
+
+
+            .visualizar-titulo h1 {
+
+                font-size: 23px;
+
+            }
+
+
+            .contenedor-imagen {
+
+                padding: 10px;
+
+                min-height: 200px;
+
+            }
+
+
+            .imagen-evidencia {
+
+                max-height: 65vh;
+
+            }
+
+
+            .botones-visualizar {
+
+                flex-direction: column;
+
+            }
+
+
+            .boton-visualizar {
+
+                width: 100%;
+
+                box-sizing: border-box;
+
+            }
+
         }
 
     </style>
@@ -120,78 +537,228 @@
 </head>
 
 
+
 <body>
 
-<!-- ==============================
-     ENCABEZADO
-=============================== -->
 
-<header class="encabezado">
+    <!-- =====================================================
+         ENCABEZADO
+         IGUAL AL DE LAS SEMANAS
+    ====================================================== -->
 
-    <div class="logo">
-
-        <img src="../Imagen/logo.png"
-             alt="Logo UPLA">
-
-    </div>
+    <header class="encabezado">
 
 
-    <nav class="menu">
+        <!-- LOGO UPLA -->
 
-        <a href="../index.html">
+        <div class="logo">
 
-            <i class="fa-solid fa-house"></i>
-
-            Inicio
-
-        </a>
-
-
-        <a href="#">
-
-            <i class="fa-solid fa-user"></i>
-
-            Mi Perfil
-
-        </a>
-
-
-        <a href="unidades.html" class="activo">
-
-            <i class="fa-solid fa-folder"></i>
-
-            Portafolio
-
-        </a>
-
-    </nav>
-
-
-    <div class="informacion-facultad">
-
-        <img src="../Imagen/Ingenieria.jpg"
-             alt="Facultad de Ingeniería">
-
-        <div>
-
-            <strong>
-                Facultad de Ingeniería
-            </strong>
-
-            <p>
-                Escuela Profesional de Ingeniería
-                de Sistemas y Computación
-            </p>
+            <img
+                src="../Imagen/logo.png"
+                alt="Logo UPLA">
 
         </div>
+
+
+
+        <!-- MENÚ -->
+
+        <nav class="menu">
+
+
+            <a href="../index.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                Inicio
+
+            </a>
+
+
+            <a href="#">
+
+                <i class="fa-solid fa-user"></i>
+
+                Mi Perfil
+
+            </a>
+
+
+            <a
+                href="Unidades.html"
+                class="activo">
+
+                <i class="fa-solid fa-folder"></i>
+
+                Portafolio
+
+            </a>
+
+
+        </nav>
+
+
+
+        <!-- FACULTAD -->
+
+        <div class="info-facultad">
+
+
+            <img
+                src="../Imagen/Ingenieria.jpg"
+                alt="Facultad de Ingeniería">
+
+
+            <div>
+
+                <strong>
+                    Facultad de Ingeniería
+                </strong>
+
+                <span>
+                    Ingeniería de Sistemas y Computación
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =====================================================
+         CONTENIDO
+    ====================================================== -->
+
+    <main>
+
+
+        <div class="visualizar-contenedor">
+
+
+            <!-- TÍTULO -->
+
+            <div class="visualizar-titulo">
+
+
+                <h1>
+
+                    <i class="fa-solid fa-image"></i>
+
+                    Visualizar Evidencia
+
+                </h1>
+
+
+                <p>
+                    Evidencia de aprendizaje del portafolio académico
+                </p>
+
+
+            </div>
+
+
+
+            <!-- IMAGEN -->
+
+            <div class="contenedor-imagen">
+
+
+                <img
+                    id="imagen-evidencia"
+                    class="imagen-evidencia"
+                    src=""
+                    alt="Evidencia de aprendizaje">
+
+
+                <!-- ERROR -->
+
+                <div
+                    id="mensaje-error"
+                    class="mensaje-error">
+
+
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+
+
+                    No se pudo cargar la imagen.
+
+
+                    <br>
+
+
+                    Verifica que la ruta y el nombre
+                    del archivo sean correctos.
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- BOTONES -->
+
+            <div class="botones-visualizar">
+
+
+                <!-- VOLVER -->
+
+                <a
+                    href="javascript:history.back()"
+                    class="boton-visualizar boton-volver">
+
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+
+                    Volver
+
+
+                </a>
+
+
+
+                <!-- DESCARGAR -->
+
+                <a
+                    id="descargar-imagen"
+                    href="#"
+                    class="boton-visualizar boton-descargar"
+                    download>
+
+
+                    <i class="fa-solid fa-download"></i>
+
+
+                    Descargar
+
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
 
     </main>
 
 
 
-    <!-- JAVASCRIPT -->
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
 
     <script>
+
+
+        /* OBTENER PARÁMETRO DE LA URL */
 
         const parametros =
             new URLSearchParams(window.location.search);
@@ -201,6 +768,9 @@
             parametros.get("imagen");
 
 
+
+        /* ELEMENTOS */
+
         const imagenElemento =
             document.getElementById("imagen-evidencia");
 
@@ -209,18 +779,69 @@
             document.getElementById("descargar-imagen");
 
 
+        const mensajeError =
+            document.getElementById("mensaje-error");
+
+
+
+        /* =====================================================
+           SI EXISTE UNA IMAGEN
+        ====================================================== */
+
         if (imagen) {
+
+
+            /* CARGAR IMAGEN */
 
             imagenElemento.src = imagen;
 
+
+            /* PREPARAR DESCARGA */
+
             botonDescargar.href = imagen;
+
+
+
+            /* CUANDO CARGA CORRECTAMENTE */
+
+            imagenElemento.onload = function () {
+
+                imagenElemento.style.display = "block";
+
+                mensajeError.style.display = "none";
+
+                botonDescargar.style.display = "inline-flex";
+
+            };
+
+
+
+            /* SI NO CARGA */
+
+            imagenElemento.onerror = function () {
+
+                imagenElemento.style.display = "none";
+
+                mensajeError.style.display = "block";
+
+                botonDescargar.style.display = "none";
+
+            };
+
 
         } else {
 
-            imagenElemento.alt =
-                "No se encontró la imagen";
+
+            /* NO SE ENVIÓ IMAGEN */
+
+            imagenElemento.style.display = "none";
+
+            mensajeError.style.display = "block";
+
+            botonDescargar.style.display = "none";
 
         }
+
 
     </script>
 
