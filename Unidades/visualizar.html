@@ -1,851 +1,431 @@
+
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Visualizar Evidencia - Portafolio Académico</title>
-
-    <!-- MISMO CSS DE LAS SEMANAS -->
-    <link rel="stylesheet" href="../css/semana1.css">
-
-    <!-- ICONOS -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <title>Visualizador de evidencias</title>
 
     <style>
-
-        /* =====================================================
-           CORRECCIÓN DEL ENCABEZADO
-           MISMO ESTILO DE LAS SEMANAS
-        ===================================================== */
-
-        .encabezado {
-
-            display: flex !important;
-
-            align-items: center !important;
-
-            justify-content: space-between !important;
-
-            width: 100% !important;
-
-            min-height: 90px !important;
-
-            box-sizing: border-box !important;
-
-            padding: 15px 45px !important;
-
-        }
-
-
-        /* LOGO UPLA */
-
-        .encabezado .logo {
-
-            display: flex !important;
-
-            align-items: center !important;
-
-            flex-shrink: 0 !important;
-
-        }
-
-
-        .encabezado .logo img {
-
-            width: 125px !important;
-
-            height: auto !important;
-
-            max-height: 55px !important;
-
-            object-fit: contain !important;
-
-        }
-
-
-        /* MENÚ */
-
-        .encabezado .menu {
-
-            display: flex !important;
-
-            align-items: center !important;
-
-            gap: 10px !important;
-
-            margin-left: 25px !important;
-
-            margin-right: 25px !important;
-
-        }
-
-
-        .encabezado .menu a {
-
-            display: flex !important;
-
-            align-items: center !important;
-
-            gap: 8px !important;
-
-            white-space: nowrap !important;
-
-        }
-
-
-        /* INFORMACIÓN DE LA FACULTAD */
-
-        .encabezado .info-facultad {
-
-            display: flex !important;
-
-            align-items: center !important;
-
-            gap: 12px !important;
-
-            margin-left: auto !important;
-
-            flex-shrink: 0 !important;
-
-        }
-
-
-        /* ESTA ES LA CORRECCIÓN PRINCIPAL */
-
-        .encabezado .info-facultad img {
-
-            width: 52px !important;
-
-            height: 52px !important;
-
-            min-width: 52px !important;
-
-            max-width: 52px !important;
-
-            min-height: 52px !important;
-
-            max-height: 52px !important;
-
-            object-fit: cover !important;
-
-            border-radius: 50% !important;
-
-            display: block !important;
-
-        }
-
-
-        .encabezado .info-facultad div {
-
-            display: flex !important;
-
-            flex-direction: column !important;
-
-            justify-content: center !important;
-
-        }
-
-
-        .encabezado .info-facultad strong {
-
-            display: block !important;
-
-            color: #ffffff !important;
-
-            font-size: 14px !important;
-
-            line-height: 1.3 !important;
-
-        }
-
-
-        .encabezado .info-facultad span {
-
-            display: block !important;
-
-            color: #9fb3c8 !important;
-
-            font-size: 12px !important;
-
-            line-height: 1.3 !important;
-
-        }
-
-
-
-        /* =====================================================
-           CONTENEDOR DE VISUALIZACIÓN
-        ===================================================== */
-
-        .visualizar-contenedor {
-
-            width: 90%;
-
-            max-width: 1100px;
-
-            margin: 45px auto;
-
-            padding: 30px;
-
-            background: rgba(10, 22, 38, 0.85);
-
-            border: 1px solid rgba(0, 200, 255, 0.20);
-
-            border-radius: 20px;
-
-            text-align: center;
-
-            box-shadow: 0 0 30px rgba(0, 170, 255, 0.08);
-
-        }
-
-
-        /* =====================================================
-           TÍTULO
-        ===================================================== */
-
-        .visualizar-titulo {
-
-            margin-bottom: 25px;
-
-        }
-
-
-        .visualizar-titulo h1 {
-
-            margin: 0 0 8px;
-
-            color: #ffffff;
-
-            font-size: 28px;
-
-        }
-
-
-        .visualizar-titulo p {
-
-            margin: 0;
-
-            color: #9fb3c8;
-
-            font-size: 15px;
-
-        }
-
-
-        /* =====================================================
-           CONTENEDOR DE IMAGEN
-        ===================================================== */
-
-        .contenedor-imagen {
-
-            width: 100%;
-
-            min-height: 300px;
-
-            padding: 20px;
-
+        * {
             box-sizing: border-box;
+        }
 
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f6f8;
+            color: #333;
+        }
+
+        body {
             display: flex;
-
-            justify-content: center;
-
-            align-items: center;
-
-            background: rgba(2, 8, 16, 0.55);
-
-            border: 1px solid rgba(255, 255, 255, 0.08);
-
-            border-radius: 15px;
-
+            flex-direction: column;
             overflow: hidden;
-
         }
 
+        .barra-superior {
+            height: 48px;
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 18px;
+            background: #fff;
+            border-bottom: 1px solid #e5e7eb;
+        }
 
-        /* =====================================================
-           IMAGEN DE LA EVIDENCIA
-        ===================================================== */
+        button {
+            font-family: inherit;
+            cursor: pointer;
+            border: 1px solid #d9dce2;
+            background: #fff;
+            color: #333;
+            border-radius: 8px;
+            padding: 9px 13px;
+            font-size: 14px;
+            transition: background .2s, border-color .2s;
+        }
 
-        .imagen-evidencia {
+        button:hover {
+            background: #edf0f5;
+            border-color: #b8bec9;
+        }
 
+        .boton-cerrar {
+            font-size: 20px;
+            padding: 4px 12px;
+            border: none;
+            background: transparent;
+        }
+
+        .zona-imagen {
+            flex: 1;
+            min-height: 0;
+            width: 100%;
+            overflow: auto;
+            overscroll-behavior: contain;
+            cursor: default;
+        }
+
+        .lienzo-imagen {
+            display: grid;
+            place-items: center;
+            width: max-content;
+            min-width: 100%;
+            min-height: 100%;
+            padding: 24px;
+        }
+
+        #imagen-evidencia {
             display: block;
-
-            max-width: 100%;
-
-            max-height: 75vh;
-
             width: auto;
-
             height: auto;
-
+            max-width: none;
+            max-height: none;
             object-fit: contain;
-
-            border-radius: 10px;
-
-            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.40);
-
+            border-radius: 3px;
+            box-shadow: 0 3px 18px rgba(0, 0, 0, 0.10);
+            user-select: none;
+            -webkit-user-drag: none;
         }
 
+        #imagen-evidencia.arrastrable {
+            cursor: grab;
+        }
 
-        /* =====================================================
-           MENSAJE DE ERROR
-        ===================================================== */
+        #imagen-evidencia.arrastrando {
+            cursor: grabbing;
+        }
 
         .mensaje-error {
-
             display: none;
-
-            color: #ff8f8f;
-
-            font-size: 16px;
-
+            max-width: 420px;
+            padding: 24px;
+            margin: auto;
+            text-align: center;
             line-height: 1.6;
-
-            padding: 30px;
-
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
         }
 
-
-        .mensaje-error i {
-
-            display: block;
-
-            margin-bottom: 12px;
-
-            font-size: 38px;
-
-        }
-
-
-        /* =====================================================
-           BOTONES
-        ===================================================== */
-
-        .botones-visualizar {
-
+        .barra-controles {
+            min-height: 68px;
             display: flex;
-
-            justify-content: center;
-
             align-items: center;
-
-            gap: 15px;
-
-            margin-top: 25px;
-
+            justify-content: center;
             flex-wrap: wrap;
-
+            gap: 10px;
+            padding: 12px 16px;
+            background: #fff;
+            border-top: 1px solid #e5e7eb;
         }
 
-
-        .boton-visualizar {
-
-            display: inline-flex;
-
+        .grupo-zoom {
+            display: flex;
             align-items: center;
-
-            justify-content: center;
-
             gap: 8px;
-
-            padding: 12px 22px;
-
-            border-radius: 10px;
-
-            text-decoration: none;
-
-            font-weight: 600;
-
-            transition: all 0.3s ease;
-
         }
 
-
-        /* BOTÓN VOLVER */
-
-        .boton-volver {
-
-            color: #ffffff;
-
-            background: rgba(255, 255, 255, 0.08);
-
-            border: 1px solid rgba(255, 255, 255, 0.15);
-
+        .boton-zoom {
+            width: 40px;
+            height: 38px;
+            padding: 0;
+            font-size: 21px;
         }
 
-
-        .boton-volver:hover {
-
-            background: rgba(255, 255, 255, 0.15);
-
-            transform: translateY(-2px);
-
+        #nivel-zoom {
+            min-width: 58px;
+            text-align: center;
+            font-size: 13px;
+            color: #555;
+            font-variant-numeric: tabular-nums;
         }
-
-
-        /* BOTÓN DESCARGAR */
 
         .boton-descargar {
-
-            color: #ffffff;
-
-            background: linear-gradient(
-                135deg,
-                #0077ff,
-                #00bfff
-            );
-
-            border: 1px solid rgba(255, 255, 255, 0.08);
-
+            background: #263b63;
+            color: white;
+            border-color: #263b63;
         }
-
 
         .boton-descargar:hover {
-
-            transform: translateY(-2px);
-
-            box-shadow:
-                0 8px 20px rgba(0, 170, 255, 0.25);
-
+            background: #1c2d4d;
+            color: white;
         }
 
-
-
-        /* =====================================================
-           RESPONSIVE
-        ===================================================== */
-
-        @media (max-width: 900px) {
-
-            .encabezado {
-
-                padding: 15px 25px !important;
-
+        @media (max-width: 520px) {
+            .barra-controles {
+                gap: 7px;
+                padding: 10px 8px;
             }
 
-
-            .encabezado .menu {
-
-                margin-left: 10px !important;
-
-                margin-right: 10px !important;
-
+            button {
+                padding: 9px 10px;
+                font-size: 13px;
             }
 
-
-            .encabezado .info-facultad span {
-
-                display: none !important;
-
+            .boton-zoom {
+                width: 34px;
             }
 
+            .lienzo-imagen {
+                padding: 12px;
+            }
         }
-
-
-        @media (max-width: 700px) {
-
-            .encabezado {
-
-                flex-wrap: wrap !important;
-
-                gap: 15px !important;
-
-                justify-content: center !important;
-
-            }
-
-
-            .encabezado .menu {
-
-                order: 3 !important;
-
-                width: 100% !important;
-
-                justify-content: center !important;
-
-            }
-
-
-            .encabezado .info-facultad {
-
-                margin-left: 0 !important;
-
-            }
-
-
-            .visualizar-contenedor {
-
-                width: 92%;
-
-                margin: 30px auto;
-
-                padding: 20px;
-
-            }
-
-
-            .visualizar-titulo h1 {
-
-                font-size: 23px;
-
-            }
-
-
-            .contenedor-imagen {
-
-                padding: 10px;
-
-                min-height: 200px;
-
-            }
-
-
-            .imagen-evidencia {
-
-                max-height: 65vh;
-
-            }
-
-
-            .botones-visualizar {
-
-                flex-direction: column;
-
-            }
-
-
-            .boton-visualizar {
-
-                width: 100%;
-
-                box-sizing: border-box;
-
-            }
-
-        }
-
     </style>
-
 </head>
-
-
 
 <body>
 
+    <div class="barra-superior">
+        <button class="boton-cerrar" id="cerrar-visor"
+                title="Cerrar visualizador" aria-label="Cerrar visualizador">
+            ×
+        </button>
+    </div>
 
-    <!-- =====================================================
-         ENCABEZADO
-         IGUAL AL DE LAS SEMANAS
-    ====================================================== -->
-
-    <header class="encabezado">
-
-
-        <!-- LOGO UPLA -->
-
-        <div class="logo">
-
-            <img
-                src="../Imagen/logo.png"
-                alt="Logo UPLA">
-
+    <main class="zona-imagen" id="zona-imagen">
+        <div class="lienzo-imagen" id="lienzo-imagen">
+            <img id="imagen-evidencia" alt="Evidencia académica">
+            <div class="mensaje-error" id="mensaje-error">
+                <strong>No se pudo cargar la imagen.</strong>
+                <p>Verifica que la ruta de la evidencia sea correcta y que el archivo exista.</p>
+            </div>
         </div>
-
-
-
-        <!-- MENÚ -->
-
-        <nav class="menu">
-
-
-            <a href="../index.html">
-
-                <i class="fa-solid fa-house"></i>
-
-                Inicio
-
-            </a>
-
-
-            <a href="#">
-
-                <i class="fa-solid fa-user"></i>
-
-                Mi Perfil
-
-            </a>
-
-
-            <a
-                href="Unidades.html"
-                class="activo">
-
-                <i class="fa-solid fa-folder"></i>
-
-                Portafolio
-
-            </a>
-
-
-        </nav>
-
-
-
-        <!-- FACULTAD -->
-
-        <div class="info-facultad">
-
-
-            <img
-                src="../Imagen/Ingenieria.jpg"
-                alt="Facultad de Ingeniería">
-
-
-            <div>
-
-                <strong>
-                    Facultad de Ingeniería
-                </strong>
-
-                <span>
-                    Ingeniería de Sistemas y Computación
-                </span>
-
-            </div>
-
-
-        </div>
-
-
-    </header>
-
-
-
-    <!-- =====================================================
-         CONTENIDO
-    ====================================================== -->
-
-    <main>
-
-
-        <div class="visualizar-contenedor">
-
-
-            <!-- TÍTULO -->
-
-            <div class="visualizar-titulo">
-
-
-                <h1>
-
-                    <i class="fa-solid fa-image"></i>
-
-                    Visualizar Evidencia
-
-                </h1>
-
-
-                <p>
-                    Evidencia de aprendizaje del portafolio académico
-                </p>
-
-
-            </div>
-
-
-
-            <!-- IMAGEN -->
-
-            <div class="contenedor-imagen">
-
-
-                <img
-                    id="imagen-evidencia"
-                    class="imagen-evidencia"
-                    src=""
-                    alt="Evidencia de aprendizaje">
-
-
-                <!-- ERROR -->
-
-                <div
-                    id="mensaje-error"
-                    class="mensaje-error">
-
-
-                    <i class="fa-solid fa-triangle-exclamation"></i>
-
-
-                    No se pudo cargar la imagen.
-
-
-                    <br>
-
-
-                    Verifica que la ruta y el nombre
-                    del archivo sean correctos.
-
-
-                </div>
-
-
-            </div>
-
-
-
-            <!-- BOTONES -->
-
-            <div class="botones-visualizar">
-
-
-                <!-- VOLVER -->
-
-                <a
-                    href="javascript:history.back()"
-                    class="boton-visualizar boton-volver">
-
-
-                    <i class="fa-solid fa-arrow-left"></i>
-
-
-                    Volver
-
-
-                </a>
-
-
-
-                <!-- DESCARGAR -->
-
-                <a
-                    id="descargar-imagen"
-                    href="#"
-                    class="boton-visualizar boton-descargar"
-                    download>
-
-
-                    <i class="fa-solid fa-download"></i>
-
-
-                    Descargar
-
-
-                </a>
-
-
-            </div>
-
-
-        </div>
-
-
     </main>
 
+    <footer class="barra-controles">
+        <div class="grupo-zoom">
+            <button class="boton-zoom" id="reducir" title="Alejar">−</button>
+            <span id="nivel-zoom">100%</span>
+            <button class="boton-zoom" id="ampliar" title="Acercar">+</button>
+        </div>
 
-
-    <!-- =====================================================
-         JAVASCRIPT
-    ====================================================== -->
+        <button id="ajustar">Ajustar a pantalla</button>
+        <button id="restablecer">Tamaño original</button>
+        <button class="boton-descargar" id="descargar-imagen">
+            Descargar
+        </button>
+    </footer>
 
     <script>
+        const zona = document.getElementById("zona-imagen");
+        const lienzo = document.getElementById("lienzo-imagen");
+        const imagen = document.getElementById("imagen-evidencia");
+        const mensajeError = document.getElementById("mensaje-error");
+        const nivelZoom = document.getElementById("nivel-zoom");
 
+        const botonReducir = document.getElementById("reducir");
+        const botonAmpliar = document.getElementById("ampliar");
+        const botonAjustar = document.getElementById("ajustar");
+        const botonRestablecer = document.getElementById("restablecer");
+        const botonDescargar = document.getElementById("descargar-imagen");
+        const botonCerrar = document.getElementById("cerrar-visor");
 
-        /* OBTENER PARÁMETRO DE LA URL */
+        let zoom = 1;
+        let imagenCargada = false;
+        let arrastrando = false;
+        let inicioX = 0;
+        let inicioY = 0;
+        let scrollInicialX = 0;
+        let scrollInicialY = 0;
 
-        const parametros =
-            new URLSearchParams(window.location.search);
+        const MIN_ZOOM = 0.1;
+        const MAX_ZOOM = 5;
 
+        // Conserva el formato de tus enlaces: visualizar.html?imagen=RUTA
+        const parametros = new URLSearchParams(window.location.search);
+        const rutaImagen = parametros.get("imagen");
 
-        const imagen =
-            parametros.get("imagen");
-
-
-
-        /* ELEMENTOS */
-
-        const imagenElemento =
-            document.getElementById("imagen-evidencia");
-
-
-        const botonDescargar =
-            document.getElementById("descargar-imagen");
-
-
-        const mensajeError =
-            document.getElementById("mensaje-error");
-
-
-
-        /* =====================================================
-           SI EXISTE UNA IMAGEN
-        ====================================================== */
-
-        if (imagen) {
-
-
-            /* CARGAR IMAGEN */
-
-            imagenElemento.src = imagen;
-
-
-            /* PREPARAR DESCARGA */
-
-            botonDescargar.href = imagen;
-
-
-
-            /* CUANDO CARGA CORRECTAMENTE */
-
-            imagenElemento.onload = function () {
-
-                imagenElemento.style.display = "block";
-
-                mensajeError.style.display = "none";
-
-                botonDescargar.style.display = "inline-flex";
-
-            };
-
-
-
-            /* SI NO CARGA */
-
-            imagenElemento.onerror = function () {
-
-                imagenElemento.style.display = "none";
-
-                mensajeError.style.display = "block";
-
-                botonDescargar.style.display = "none";
-
-            };
-
-
-        } else {
-
-
-            /* NO SE ENVIÓ IMAGEN */
-
-            imagenElemento.style.display = "none";
-
-            mensajeError.style.display = "block";
-
-            botonDescargar.style.display = "none";
-
+        function actualizarEtiquetaZoom() {
+            nivelZoom.textContent = Math.round(zoom * 100) + "%";
+            botonReducir.disabled = zoom <= MIN_ZOOM;
+            botonAmpliar.disabled = zoom >= MAX_ZOOM;
         }
 
+        function aplicarZoom(nuevoZoom, puntoX, puntoY) {
+            if (!imagenCargada) return;
 
+            nuevoZoom = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, nuevoZoom));
+
+            const rectZona = zona.getBoundingClientRect();
+            const anclaX = puntoX === undefined
+                ? zona.clientWidth / 2
+                : puntoX - rectZona.left;
+            const anclaY = puntoY === undefined
+                ? zona.clientHeight / 2
+                : puntoY - rectZona.top;
+
+            const rectImagen = imagen.getBoundingClientRect();
+
+            const posicionImagenX = rectImagen.left - rectZona.left + zona.scrollLeft;
+            const posicionImagenY = rectImagen.top - rectZona.top + zona.scrollTop;
+
+            const proporcionX = Math.max(0, Math.min(1,
+                (zona.scrollLeft + anclaX - posicionImagenX) / imagen.clientWidth
+            ));
+
+            const proporcionY = Math.max(0, Math.min(1,
+                (zona.scrollTop + anclaY - posicionImagenY) / imagen.clientHeight
+            ));
+
+            zoom = nuevoZoom;
+            imagen.style.width = (imagen.naturalWidth * zoom) + "px";
+            imagen.style.height = (imagen.naturalHeight * zoom) + "px";
+
+            actualizarEtiquetaZoom();
+
+            requestAnimationFrame(() => {
+                const nuevaRectImagen = imagen.getBoundingClientRect();
+                const nuevaPosicionX =
+                    nuevaRectImagen.left - rectZona.left + zona.scrollLeft;
+                const nuevaPosicionY =
+                    nuevaRectImagen.top - rectZona.top + zona.scrollTop;
+
+                zona.scrollLeft = nuevaPosicionX
+                    + proporcionX * imagen.clientWidth - anclaX;
+
+                zona.scrollTop = nuevaPosicionY
+                    + proporcionY * imagen.clientHeight - anclaY;
+            });
+        }
+
+        function ajustarPantalla() {
+            if (!imagenCargada) return;
+
+            const espacioAncho = Math.max(100, zona.clientWidth - 60);
+            const espacioAlto = Math.max(100, zona.clientHeight - 60);
+
+            const escalaAncho = espacioAncho / imagen.naturalWidth;
+            const escalaAlto = espacioAlto / imagen.naturalHeight;
+
+            const escala = Math.min(escalaAncho, escalaAlto, 1);
+
+            zoom = Math.max(MIN_ZOOM, escala);
+            imagen.style.width = (imagen.naturalWidth * zoom) + "px";
+            imagen.style.height = (imagen.naturalHeight * zoom) + "px";
+
+            actualizarEtiquetaZoom();
+
+            requestAnimationFrame(() => {
+                zona.scrollLeft = 0;
+                zona.scrollTop = 0;
+            });
+        }
+
+        function restaurarTamanoOriginal() {
+            aplicarZoom(1);
+            requestAnimationFrame(() => {
+                zona.scrollLeft = 0;
+                zona.scrollTop = 0;
+            });
+        }
+
+        function cerrarVisualizador() {
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.close();
+            }
+        }
+
+        if (rutaImagen) {
+            imagen.src = rutaImagen;
+        } else {
+            mensajeError.style.display = "block";
+            imagen.style.display = "none";
+        }
+
+        imagen.addEventListener("load", () => {
+            imagenCargada = true;
+            imagen.style.display = "block";
+            mensajeError.style.display = "none";
+            ajustarPantalla();
+        });
+
+        imagen.addEventListener("error", () => {
+            imagenCargada = false;
+            imagen.style.display = "none";
+            mensajeError.style.display = "block";
+        });
+
+        botonReducir.addEventListener("click", () => {
+            aplicarZoom(zoom - 0.2);
+        });
+
+        botonAmpliar.addEventListener("click", () => {
+            aplicarZoom(zoom + 0.2);
+        });
+
+        botonAjustar.addEventListener("click", ajustarPantalla);
+        botonRestablecer.addEventListener("click", restaurarTamanoOriginal);
+        botonCerrar.addEventListener("click", cerrarVisualizador);
+
+        botonDescargar.addEventListener("click", () => {
+            if (!rutaImagen || !imagenCargada) return;
+
+            const enlace = document.createElement("a");
+            enlace.href = imagen.src;
+            enlace.download = rutaImagen.split("/").pop() || "evidencia";
+            document.body.appendChild(enlace);
+            enlace.click();
+            enlace.remove();
+        });
+
+        // Permite mover la imagen ampliada con el ratón.
+        imagen.addEventListener("pointerdown", (evento) => {
+            if (!imagenCargada || evento.button !== 0) return;
+
+            arrastrando = true;
+            inicioX = evento.clientX;
+            inicioY = evento.clientY;
+            scrollInicialX = zona.scrollLeft;
+            scrollInicialY = zona.scrollTop;
+
+            imagen.classList.add("arrastrando");
+            imagen.setPointerCapture(evento.pointerId);
+            evento.preventDefault();
+        });
+
+        imagen.addEventListener("pointermove", (evento) => {
+            if (!arrastrando) return;
+
+            zona.scrollLeft = scrollInicialX - (evento.clientX - inicioX);
+            zona.scrollTop = scrollInicialY - (evento.clientY - inicioY);
+        });
+
+        function terminarArrastre() {
+            arrastrando = false;
+            imagen.classList.remove("arrastrando");
+        }
+
+        imagen.addEventListener("pointerup", terminarArrastre);
+        imagen.addEventListener("pointercancel", terminarArrastre);
+        imagen.addEventListener("lostpointercapture", terminarArrastre);
+
+        // Ctrl + rueda del ratón permite acercar o alejar.
+        zona.addEventListener("wheel", (evento) => {
+            if (!evento.ctrlKey || !imagenCargada) return;
+
+            evento.preventDefault();
+            const factor = evento.deltaY < 0 ? 1.1 : 1 / 1.1;
+            aplicarZoom(zoom * factor, evento.clientX, evento.clientY);
+        }, { passive: false });
+
+        // Escape permite volver a la página anterior.
+        document.addEventListener("keydown", (evento) => {
+            if (evento.key === "Escape") cerrarVisualizador();
+        });
+
+        window.addEventListener("resize", () => {
+            if (imagenCargada) ajustarPantalla();
+        });
+
+        actualizarEtiquetaZoom();
     </script>
 
-
 </body>
-
 </html>
